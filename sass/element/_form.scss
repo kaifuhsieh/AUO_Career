@@ -1,16 +1,17 @@
-$form_title_width :150px; // 表單title寬度
+$form_title_width: 150px; // 表單title寬度
 
-@mixin formStyle($f_color: $color-word, $f_border: $color-gray, $f_radius: .5em) {
+@mixin formStyle($f_color: $color-word, $f_border: $color-gray, $f_radius: 0.5em) {
     color: $f_color;
     font-size: 1em;
-    border: 1px solid $f_border;
-    padding: .5em;
+    border: 1px solid $auo-blue;
+    height: 3em;
+    padding: 0.5em 1em;
     background: #fff;
     vertical-align: middle;
-    margin-bottom: .3em;
+    margin-bottom: 0.3em;
     // @include box-sizing;
-    transition: .3s ease-out;
-    border-radius: .5em;
+    transition: 0.3s ease-out;
+    border-radius: 0.5em;
 }
 
 select::-ms-expand {
@@ -18,14 +19,14 @@ select::-ms-expand {
 }
 
 .form_grid {
-    font-size: .938em;
-    margin: .5em;
-    border-top: 1px solid #DDD;
+    font-size: 0.938em;
+    margin: 0.5em;
+    border-top: 1px solid #ddd;
 
     .form_grp {
-        border-bottom: 1px dashed #DDD;
+        border-bottom: 1px dashed #ddd;
         overflow: hidden;
-        padding: .2em 0;
+        padding: 0.2em 0;
 
         // 閱讀條文
         &.agree {
@@ -34,7 +35,7 @@ select::-ms-expand {
             label {
                 float: left;
                 width: auto;
-                margin: 0 .5em .5em 0;
+                margin: 0 0.5em 0.5em 0;
             }
         }
     }
@@ -71,8 +72,7 @@ select::-ms-expand {
                 padding: 0 1em;
 
                 &.form_inline {
-
-                    input[type="text"],
+                    input[type='text'],
                     select {
                         width: auto;
                         min-width: 100px;
@@ -94,17 +94,17 @@ select::-ms-expand {
 
         // 電話專屬
         .tel {
-            input[type="text"]:first-child {
-                background: url(../images/icon/icon_add.svg) no-repeat .5em center;
+            input[type='text']:first-child {
+                background: url(../images/icon/icon_add.svg) no-repeat 0.5em center;
                 background-size: 12px;
                 padding-left: 1.5em;
             }
 
-            input[type="text"]:first-child,
+            input[type='text']:first-child,
             select:first-child {
                 width: 100px !important;
 
-                &~input {
+                & ~ input {
                     width: calc(100% - 200px);
 
                     @include screen('xs_mobile') {
@@ -119,7 +119,7 @@ select::-ms-expand {
         .birthday {
             select {
                 display: inline-block;
-                margin-right: .5em;
+                margin-right: 0.5em;
                 text-align-last: center;
 
                 @include screen('xs_mobile') {
@@ -133,8 +133,8 @@ select::-ms-expand {
                     text-align: center;
                 }
 
-                ~select {
-                    margin-left: .2em;
+                ~ select {
+                    margin-left: 0.2em;
 
                     @include screen('xs_mobile') {
                         margin-left: 0;
@@ -158,7 +158,7 @@ select::-ms-expand {
                 }
             }
 
-            input[type="text"] {
+            input[type='text'] {
                 width: calc(100% - 211px) !important;
 
                 @include screen('mobile') {
@@ -170,7 +170,7 @@ select::-ms-expand {
 
         // 日期專屬
         .datepick {
-            padding-right: .5em;
+            padding-right: 0.5em;
             position: relative;
             display: inline-block;
 
@@ -179,18 +179,18 @@ select::-ms-expand {
                 display: block;
             }
 
-            &+.datepick {
-                margin-left: .3em;
+            & + .datepick {
+                margin-left: 0.3em;
                 margin-right: 0;
                 padding-right: 0;
 
                 &:before {
-                    content: "~";
+                    content: '~';
                     font-size: 1.5em;
                     display: inline-block;
                     position: absolute;
-                    left: -.65em;
-                    top: .3em;
+                    left: -0.65em;
+                    top: 0.3em;
                     color: #777;
                 }
 
@@ -203,15 +203,15 @@ select::-ms-expand {
                 }
 
                 i {
-                    right: .5em;
+                    right: 0.5em;
                 }
             }
 
             i {
                 position: absolute;
-                padding: .37em .1em !important;
+                padding: 0.37em 0.1em !important;
                 right: 1em;
-                top: .2em;
+                top: 0.2em;
                 min-width: 1em;
                 background: none;
                 border: none;
@@ -225,7 +225,7 @@ select::-ms-expand {
                 }
             }
 
-            >input[type="text"] {
+            > input[type='text'] {
                 width: 10em;
                 padding-right: 2em;
 
@@ -239,13 +239,12 @@ select::-ms-expand {
 
 //---------------------------------------------form setting--------//
 form {
-
     .form_grp,
     .check_grp,
     .radio_grp,
     .btn_grp,
     .upload_grp {
-        margin-bottom: .2em;
+        margin-bottom: 0.2em;
     }
 
     .check_grp,
@@ -260,19 +259,18 @@ form {
         &.form_inline {
             label {
                 display: inline-block;
-                margin: .2em .5em 0 0;
+                margin: 0.2em 0.5em 0 0;
             }
         }
     }
 
     .form_grp,
     .upload_grp {
-
         // 文字表單個別行內設定
         &.form_inline {
             label {
                 display: inline-block;
-                margin-right: .5em;
+                margin-right: 0.5em;
             }
 
             input,
@@ -288,18 +286,18 @@ form {
         label {
             display: inline-block;
             vertical-align: middle;
-            margin-right: .5em;
+            margin-right: 0.5em;
 
-            &~input,
-            &~textarea {
+            & ~ input,
+            & ~ textarea {
                 display: inline-block;
                 width: auto;
                 vertical-align: middle;
             }
         }
 
-        input[type="text"],
-        input[type="password"],
+        input[type='text'],
+        input[type='password'],
         select,
         textarea {
             width: auto;
@@ -312,21 +310,20 @@ form {
         .btn_grp,
         .upload_grp {
             display: inline-block;
-            margin-right: .5em;
+            margin-right: 0.5em;
         }
 
         // .check_grp,
         // .radio_grp {}
 
         .btn_grp {
-
             .btn,
-            input[type="submit"],
-            input[type="reset"],
-            input[type="button"],
-            input[type="search"] {
+            input[type='submit'],
+            input[type='reset'],
+            input[type='button'],
+            input[type='search'] {
                 margin-top: -3px;
-                padding: .45em 1em;
+                padding: 0.45em 1em;
             }
         }
 
@@ -342,14 +339,13 @@ label,
 legend {
     // white-space: nowrap;
     display: inline-block;
-    margin: 0 0 .5em 0;
+    margin: 0 0 0.5em 0;
 
     @include screen('xs_mobile') {
         display: block;
     }
 
     &.inline {
-
         input,
         select,
         textarea {
@@ -382,10 +378,10 @@ textarea {
 }
 
 //---------------------------------------------文字輸入表單--------//
-input[type="text"],
-input[type="password"],
-input[type="file"],
-input[type="tel"] {
+input[type='text'],
+input[type='password'],
+input[type='file'],
+input[type='tel'] {
     &::-webkit-input-placeholder {
         /* Chrome/Opera/Safari */
         color: darken($color-gray, 20);
@@ -407,10 +403,6 @@ input[type="tel"] {
     }
 }
 
-
-
-
-
 textarea {
     @include formStyle();
     height: 5em;
@@ -421,11 +413,11 @@ textarea {
     }
 }
 
-input[type="text"]:focus,
-input[type="reset"]:focus,
-input[type="file"]:focus,
-input[type="tel"]:focus,
-input[type="password"]:focus,
+input[type='text']:focus,
+input[type='reset']:focus,
+input[type='file']:focus,
+input[type='tel']:focus,
+input[type='password']:focus,
 textarea:focus,
 select:focus {
     border: 1px solid lighten($form-focus, 20);
@@ -436,11 +428,11 @@ select:focus {
 //
 //---------------------------------------------下拉選單--------//
 select {
-    line-height: 2.4em;
-    height: 2.4em;
-    padding: 0 24px 0 .5em;
-    border: 1px solid $color-gray;
-    background: #fff url(../images/icon/icon_select_arrow.png) no-repeat right center;
+    line-height: 3em;
+    height: 3em;
+    padding: 0em 1em;
+    border: 1px solid $auo-blue;
+    background: #fff url(../images/i_select_arrow.svg) no-repeat right center;
     background-size: 16px;
 
     option {
@@ -455,37 +447,37 @@ select {
 }
 
 //---------------------------------------------reset--------//
-input[type="reset"] {
+input[type='reset'] {
     text-shadow: none;
 }
 
 //---------------------------------------------checkbox & radio--------//
-input[type="checkbox"],
-input[type="radio"] {
+input[type='checkbox'],
+input[type='radio'] {
     font-size: 1em;
-    margin: -4px .2em 0 0;
+    margin: -4px 0.2em 0 0;
     width: 1em;
     height: 1em;
     background-color: #f7f6ee;
     border: 2px solid $color-gray;
     border-radius: 2px;
-    margin-right: .5em;
+    margin-right: 0.5em;
 }
 
-input[type="radio"] {
+input[type='radio'] {
     border-radius: 50%;
 }
 
-input[type="checkbox"]:checked,
-input[type="checkbox"]:focus,
-input[type="radio"]:checked,
-input[type="radio"]:focus {
+input[type='checkbox']:checked,
+input[type='checkbox']:focus,
+input[type='radio']:checked,
+input[type='radio']:focus {
     border-color: $form-focus;
     background-color: $form-focus;
     outline: none;
 }
 
-input[type="checkbox"]:checked {
+input[type='checkbox']:checked {
     background-image: url(../images/basic/icon_checked.svg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -494,7 +486,7 @@ input[type="checkbox"]:checked {
     border-radius: 2px;
 }
 
-input[type="radio"]:checked {
+input[type='radio']:checked {
     box-shadow: #fff 0 0 0 3px inset, $form-focus 0 0 0 1px;
 }
 
@@ -505,7 +497,7 @@ input[disable] {
     color: darken($color-gray, 10);
     border-color: darken($color-gray, 10);
 
-    &~label {
+    & ~ label {
         color: darken($color-gray, 10);
     }
 
@@ -532,7 +524,7 @@ input[disable] {
         overflow: hidden;
         top: 1px;
         right: 3px;
-        padding: .2em 1em !important;
+        padding: 0.2em 1em !important;
         border-radius: 4px;
 
         &:hover,
@@ -542,7 +534,7 @@ input[disable] {
     }
 }
 
-input[type="file"] {
+input[type='file'] {
     position: absolute;
     top: 0;
     right: 0;
@@ -559,23 +551,23 @@ img.captcha {
     display: inline-block;
     vertical-align: middle;
     max-height: 2.5em;
-    margin-bottom: .3em;
+    margin-bottom: 0.3em;
 
-    &+input {
+    & + input {
         display: inline-block;
         width: auto;
         vertical-align: middle;
     }
 
-    ~.btn {
+    ~ .btn {
         margin-top: -1px;
     }
 
-    ~img {
+    ~ img {
         display: inline-block;
         vertical-align: middle;
         max-height: 2.4em;
-        margin-bottom: .5em;
+        margin-bottom: 0.5em;
     }
 }
 
