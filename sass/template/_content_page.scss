@@ -1,5 +1,5 @@
 .inner_img {
-    height: 200px;
+    min-height: 200px;
     padding-top: 100px;
     background-color: $auo_lightblue;
     position: relative;
@@ -20,6 +20,9 @@
         .container {
             .form {
                 transform: translateY(-80px) !important;
+                @include screen('mobile') {
+                    transform: translateY(-50px) !important;
+                }
             }
         }
     }
@@ -714,7 +717,7 @@
         color: #fff;
         border-radius: 2em;
         font-size: 1em;
-        padding: 0em 2em;
+        padding: 1em 2em;
         line-height: 2.5em;
         height: 2.5em;
 
@@ -732,6 +735,10 @@
             width: 80%;
             margin-left: -40%;
             border-radius: 0.5em;
+            height: 3em;
+            padding: 0em 0;
+            font-size: 1.25em;
+            line-height: 3em;
         }
     }
 
