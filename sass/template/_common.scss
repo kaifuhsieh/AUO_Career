@@ -11,6 +11,19 @@
 
 // @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;400&display=swap');
 
+body::-webkit-scrollbar,
+body::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    background-color: rgba($auo_lightblue, 1);
+}
 body {
     line-height: 1.5em;
     font-family: 'Mabry Pro', Verdana, 'Noto Sans TC', 'Noto Sans SC', 'Noto Sans JP', 'Microsoft JhengHei',
@@ -19,6 +32,20 @@ body {
     background-color: #f5f5f5;
 }
 
+::selection {
+    background: $auo_yellow;
+    color: $auo_blue;
+}
+::-moz-selection {
+    background: $auo_yellow;
+    color: $auo_blue;
+}
+img::selection {
+    background: transparent;
+}
+img::-moz-selection {
+    background: transparent;
+}
 * {
     box-sizing: border-box;
 }

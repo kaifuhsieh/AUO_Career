@@ -6,6 +6,7 @@ $(function () {
     burger.off().click(function (e) {
         sidebar.stop().toggleClass('menu-opened');
         $(this).blur();
+        e.preventDefault();
     });
     // kv
     var $carousel = $('.carousel').slick({
@@ -405,8 +406,39 @@ $(function () {
             $('html, body')
                 .stop(true, true)
                 .animate({ scrollTop: $('.job_search').offset().top - 150 }, 800, 'easeOutExpo');
+            sidebar.stop().removeClass('menu-opened');
             e.preventDefault();
         });
+    // 職缺搜尋
+    $('select[multiple].active.conditionSelect').multiselect({
+        columns: 2,
+        placeholder: '職務類別',
+        search: false,
+        searchOptions: {
+            default: '搜尋',
+        },
+        selectAll: true,
+    });
+
+    $('select[multiple].active.regionSelect').multiselect({
+        columns: 2,
+        placeholder: '地區',
+        search: false,
+        searchOptions: {
+            default: '搜尋',
+        },
+        selectAll: true,
+    });
+    $('<span class="heading">RD</span>').insertBefore('#ms-list-1 ul li[data-search-term="製程開發"]');
+    $('<span class="heading">BU</span>').insertBefore('#ms-list-1 ul li[data-search-term="業務"]');
+    $('<span class="heading">IU</span>').insertBefore('#ms-list-1 ul li[data-search-term="人力資源管理"]');
+    $('<span class="heading">CIM/IT</span>').insertBefore('#ms-list-1 ul li[data-search-term="資訊工程"]');
+    $('<span class="heading">OU</span>').insertBefore('#ms-list-1 ul li[data-search-term="製程設備"]');
+    $('<span class="heading">SCM</span>').insertBefore('#ms-list-1 ul li[data-search-term="運籌管理"]');
+    $('<span class="heading">Technician</span>').insertBefore('#ms-list-1 ul li[data-search-term="技術員"]');
+    $('<span class="heading">Technologist</span>').insertBefore('#ms-list-1 ul li[data-search-term="設備技師"]');
+    $('<span class="heading">Other</span>').insertBefore('#ms-list-1 ul li[data-search-term="其他"]');
+    $('<span class="heading">SDM</span>').insertBefore('#ms-list-1 ul li[data-search-term="產品開發"]');
 });
 $(document).ready(function () {
     // 在網頁載入時或進入 viewport 時觸發程式碼

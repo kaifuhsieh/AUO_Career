@@ -58,14 +58,47 @@
     margin-bottom: 20px;
     background: white;
     z-index: 2000;
-    border: 1px solid #aaa;
+    /* border: 1px solid #aaa; */
     overflow: auto;
     visibility: hidden;
     padding: 0.5em;
+    min-width: 300px;
+    border-radius: 0.5em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+@media screen and (max-width: 545px) {
+    .ms-options-wrap > .ms-options {
+        min-width: auto;
+    }
 }
 
 .ms-options-wrap.ms-active > .ms-options {
     visibility: visible;
+}
+.ms-options-wrap.ms-active > .ms-options .heading {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 100%;
+    font-size: 1em;
+    text-align: left;
+    color: #005087;
+    border-bottom: 1px solid #ccc;
+    padding-left: 1em;
+    margin-top: 0.75em;
+    margin-bottom: 0.5em;
+    position: relative;
+}
+.ms-options-wrap.ms-active > .ms-options .heading:before {
+    position: absolute;
+    left: 0.25em;
+    content: '';
+    top: 0.5em;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 4px 0 4px 6px;
+    border-color: transparent transparent transparent #58b4ff;
+    transform: rotate(0deg);
 }
 
 .ms-options-wrap > .ms-options > .ms-search input {

@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="vendor/slick/slick.css">
     <link rel="stylesheet" href="vendor/slick/slick-theme.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/multi_select/jquery.multiselect.css">
     <!-- favicon -->
     <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
 </head>
@@ -74,23 +75,55 @@
                             <input type="text" placeholder="請輸入關鍵字">
                         </div>
                         <div class="form_grp condition">
-                            <input type="text" placeholder="請輸入關鍵字">
+                            <select name="basic[]" multiple="multiple" class="conditionSelect active">
+                                <option value="製程開發">製程開發</option>
+                                <option value="光機開發">光機開發</option>
+                                <option value="產品開發">產品開發</option>
+                                <option value="電子電機開發">電子電機開發</option>
+                                <option value="系統開發">系統開發</option>
+                                <option value="業務">業務</option>
+                                <option value="產品行銷">產品行銷</option>
+                                <option value="客戶服務">客戶服務</option>
+                                <option value="產品應用">產品應用</option>
+                                <option value="產品專案">產品專案</option>
+                                <option value="人力資源管理">人力資源管理</option>
+                                <option value="財務管理">財務管理</option>
+                                <option value="秘書助理">秘書助理</option>
+                                <option value="法務智權">法務智權</option>
+                                <option value="資訊工程">資訊工程</option>
+                                <option value="製程設備">製程設備</option>
+                                <option value="自動化">自動化</option>
+                                <option value="測試整合">測試整合</option>
+                                <option value="製造課長">製造課長</option>
+                                <option value="工業工程">工業工程</option>
+                                <option value="製造課長">製造課長</option>
+                                <option value="廠務">廠務</option>
+                                <option value="環安">環安</option>
+                                <option value="設備開發">設備開發</option>
+                                <option value="品質工程">品質工程</option>
+                                <option value="運籌管理">運籌管理</option>
+                                <option value="採購">採購</option>
+                                <option value="技術員">技術員</option>
+                                <option value="設備技師">設備技師</option>
+                                <option value="其他">其他</option>
+                                <option value="產品開發">產品開發</option>
+                            </select>
                         </div>
                         <div class="form_grp region">
-                            <select name="" id="">
-                                <option value="">請選擇地區</option>
-                                <option value="">台北</option>
-                                <option value="">桃園</option>
-                                <option value="">新竹</option>
-                                <option value="">台中</option>
-                                <option value="">台南</option>
-                                <option value="">高雄</option>
-                                <option value="">中國</option>
-                                <option value="">日本</option>
-                                <option value="">韓國</option>
-                                <option value="">新加坡</option>
-                                <option value="">美國</option>
-                                <option value="">歐洲</option>
+                            <select name="basic[]" multiple="multiple" class="regionSelect active">
+                                <option value="台北">台北</option>
+                                <option value="桃園">桃園</option>
+                                <br></br>
+                                <option value="新竹">新竹</option>
+                                <option value="台中">台中</option>
+                                <option value="台南">台南</option>
+                                <option value="高雄">高雄</option>
+                                <option value="中國">中國</option>
+                                <option value="日本">日本</option>
+                                <option value="韓國">韓國</option>
+                                <option value="新加坡">新加坡</option>
+                                <option value="美國">美國</option>
+                                <option value="歐洲">歐洲</option>
                             </select>
                         </div>
                         <div class="btn_grp">
@@ -298,3 +331,5 @@
 <script>
     AOS.init();
 </script>
+<!-- select -->
+<script src="vendor/multi_select/jquery.multiselect.js"></script>

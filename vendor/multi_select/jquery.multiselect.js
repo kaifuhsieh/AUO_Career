@@ -59,8 +59,8 @@
         selectGroup: true, // select entire optgroup
         minHeight: 200, // minimum height of option overlay
         maxHeight: 600, // maximum height of option overlay
-        maxWidth: 600, // maximum width of option overlay (or selector)
-        maxPlaceholderWidth: 600, // maximum width of placeholder button
+        maxWidth: 700, // maximum width of option overlay (or selector)
+        maxPlaceholderWidth: 700, // maximum width of placeholder button
         maxPlaceholderOpts: 3, // maximum number of placeholder options to show until "# selected" shown instead
         showCheckbox: true, // display the checkbox to the user
         checkboxAutoFit: false, // auto calc checkbox padding
