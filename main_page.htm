@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="vendor/slick/slick.css">
     <link rel="stylesheet" href="vendor/slick/slick-theme.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/multi_select/jquery.multiselect.css">
     <!-- favicon -->
     <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
 </head>
@@ -34,6 +35,22 @@
     </div>
     <!-- wrapper -->
     <div class="wrapper">
+        <!-- sidebar -->
+        <div class="sidebar">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="main_page.htm"> <span>人才招募首頁</span></a>
+                    </li>
+                    <li>
+                        <a href="job_list.htm"> <span>職缺總覽</span></a>
+                    </li>
+                    <li>
+                        <a href="faq.htm"> <span>常見問題</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
         <!-- header Start-->
         <header class="header">
             <div class="container">
@@ -59,6 +76,13 @@
                 <div class="search_button">
                     <a href="#" class="q_btn_search">
                         <img src="images/icon_search.svg" alt="">
+                    </a>
+                </div>
+                <div class="mobile_button">
+                    <a href="#" class="btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </a>
                 </div>
             </div>
@@ -106,23 +130,38 @@
                             <input type="text" placeholder="請輸入關鍵字">
                         </div>
                         <div class="form_grp condition">
-                            <input type="text" placeholder="請輸入關鍵字">
+                            <select name="basic[]" multiple="multiple" class="conditionSelect active">
+                                <span>RD</span>
+                                <option value="台北">台北</option>
+                                <option value="桃園">桃園</option>
+                                <option value="新竹">新竹</option>
+                                <option value="台中">台中</option>
+                                <option value="台南">台南</option>
+                                <option value="高雄">高雄</option>
+                                <span>BU</span>
+                                <option value="中國">中國</option>
+                                <option value="日本">日本</option>
+                                <option value="韓國">韓國</option>
+                                <option value="新加坡">新加坡</option>
+                                <option value="美國">美國</option>
+                                <option value="歐洲">歐洲</option>
+                            </select>
                         </div>
                         <div class="form_grp region">
-                            <select name="" id="">
-                                <option value="">請選擇地區</option>
-                                <option value="">台北</option>
-                                <option value="">桃園</option>
-                                <option value="">新竹</option>
-                                <option value="">台中</option>
-                                <option value="">台南</option>
-                                <option value="">高雄</option>
-                                <option value="">中國</option>
-                                <option value="">日本</option>
-                                <option value="">韓國</option>
-                                <option value="">新加坡</option>
-                                <option value="">美國</option>
-                                <option value="">歐洲</option>
+                            <select name="basic[]" multiple="multiple" class="regionSelect active">
+                                <option value="台北">台北</option>
+                                <option value="桃園">桃園</option>
+                                <br></br>
+                                <option value="新竹">新竹</option>
+                                <option value="台中">台中</option>
+                                <option value="台南">台南</option>
+                                <option value="高雄">高雄</option>
+                                <option value="中國">中國</option>
+                                <option value="日本">日本</option>
+                                <option value="韓國">韓國</option>
+                                <option value="新加坡">新加坡</option>
+                                <option value="美國">美國</option>
+                                <option value="歐洲">歐洲</option>
                             </select>
                         </div>
                         <div class="btn_grp">
@@ -132,6 +171,12 @@
                         <div class="keyword">
                             <span>熱門關鍵字</span>
                             <ul>
+                                <li> <a href="#">AI</a></li>
+                                <li> <a href="#">軟體</a></li>
+                                <li> <a href="#">智慧製造</a></li>
+                                <li> <a href="#">車用</a></li>
+                                <li> <a href="#">機構</a></li>
+                                <li> <a href="#">PM</a></li>
                                 <li> <a href="#">AI</a></li>
                                 <li> <a href="#">軟體</a></li>
                                 <li> <a href="#">智慧製造</a></li>
@@ -909,4 +954,30 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init();
+</script>
+<!-- select -->
+<script src="vendor/multi_select/jquery.multiselect.js"></script>
+<script>
+    $(function () {
+        $('select[multiple].active.conditionSelect').multiselect({
+            columns: 2,
+            placeholder: '職務類別',
+            search: false,
+            searchOptions: {
+                'default': '搜尋'
+            },
+            selectAll: true
+        });
+
+        $('select[multiple].active.regionSelect').multiselect({
+            columns: 2,
+            placeholder: '地區',
+            search: false,
+            searchOptions: {
+                'default': '搜尋'
+            },
+            selectAll: true
+        });
+
+    });
 </script>

@@ -8,7 +8,7 @@
     width: 100%;
     top: 0;
     left: 0;
-    transition: .3s $cubic;
+    transition: 0.3s $cubic;
 
     @include screen('mobile') {
         height: 60px;
@@ -28,7 +28,7 @@
         padding: 0 1em;
         position: relative;
         height: 100px;
-        transition: .3s ease-out;
+        transition: 0.3s ease-out;
         align-content: center;
 
         @include screen('mobile') {
@@ -48,7 +48,6 @@
         display: flex;
         margin: 0;
 
-
         @include screen('mobile') {
             margin: 0;
             height: 40px;
@@ -56,8 +55,6 @@
             a {
                 display: flex;
                 align-items: center;
-
-
             }
         }
 
@@ -74,7 +71,7 @@
             flex-basis: 160px;
             margin: 0;
             margin-right: 1.25em;
-            transition: .3s ease-out;
+            transition: 0.3s ease-out;
 
             @include screen('tablet') {
                 width: 100px;
@@ -85,9 +82,6 @@
                 width: 90px;
                 margin-right: 0.5em;
             }
-
-
-
         }
 
         span {
@@ -98,7 +92,7 @@
             font-weight: normal;
             align-self: center;
             white-space: nowrap;
-            transition: .3s ease-out;
+            transition: 0.3s ease-out;
 
             br {
                 display: none;
@@ -121,7 +115,7 @@
             }
 
             @include screen('mobile') {
-                font-size: .875rem;
+                font-size: 0.875rem;
             }
         }
     }
@@ -199,12 +193,12 @@
         height: 2em;
         right: 0;
         top: 0;
-
+        align-self: center;
         @include screen('tablet') {
             display: block;
             position: absolute;
-            right: .6em;
-            top: .8em;
+            right: 0.6em;
+            top: 0.8em;
         }
 
         @include screen('mobile') {
@@ -213,33 +207,89 @@
 
         a {
             border-radius: 50%;
-            background-color: $auo_gray ;
+            background-color: $auo_gray;
             display: block;
             width: 2em;
             height: 2em;
             display: flex;
             align-items: center;
             justify-content: center;
+            line-height: 2em;
 
             &:hover,
             &:focus {
                 background-color: $auo_lightblue;
             }
 
-            ;
-
             img {
                 width: 1em;
                 height: 1em;
             }
         }
+    }
+    .mobile_button {
+        position: relative;
+        width: 2em;
+        height: 2em;
+        margin: 0 2em 0 auto;
+        z-index: 3;
+        display: none;
+        align-self: center;
+        top: -1px;
+        @include screen('tablet') {
+            display: block;
+        }
 
+        a.btn {
+            width: 2em !important;
+            height: 2em !important;
+            background: #eee;
+            border-radius: 50%;
+            overflow: hidden;
+            transition: 0.3s ease-out;
+            min-width: 2em;
+            padding: 0;
+            font-size: 1em;
+            &:hover,
+            &:focus {
+                background-color: $color-blue;
+                box-shadow: none;
+            }
+            span {
+                width: 1em;
+                height: 2px;
+                display: block;
+                background-color: $primaryColor;
+                position: absolute;
+                left: 50%;
+                margin-left: -0.5em;
+                top: 48%;
+
+                &:before,
+                &:after {
+                    position: absolute;
+                    content: '';
+                    width: 1em;
+                    height: 2px;
+                    display: block;
+                    background-color: $primaryColor;
+                    position: absolute;
+                    left: 50%;
+                    margin-left: -0.5em;
+                    top: -6px;
+                }
+
+                &:after {
+                    top: auto;
+                    bottom: -6px;
+                }
+            }
+        }
     }
 
     // header fix
     &.fixed {
-        @media screen and (min-width:768px) {
-
+        @media screen and (min-width: 768px) {
             box-shadow: rgba(0, 0, 0, 0.5) 0 0 25px;
             -webkit-background: rgba(255, 255, 255, 0.5);
             background: rgba(255, 255, 255, 0.5);
@@ -269,7 +319,7 @@
             h1 {
                 margin: 0;
                 height: 40px;
-                transition: .3s ease-out;
+                transition: 0.3s ease-out;
 
                 a {
                     display: flex;
@@ -283,7 +333,7 @@
                         font-size: 1.125rem;
 
                         @include screen('mobile') {
-                            font-size: .875em;
+                            font-size: 0.875em;
                         }
                     }
                 }
@@ -292,14 +342,13 @@
             nav {
                 transition: 0.3s ease-out;
 
-                >ul {
-                    >li {
+                > ul {
+                    > li {
                         ul {
                             top: 1em;
                         }
 
                         a {
-
                             &:hover,
                             &:focus {
                                 color: $aHover;
@@ -311,7 +360,6 @@
 
             .language {
                 a {
-
                     &:hover,
                     &:focus {
                         color: $aHover;
@@ -321,8 +369,6 @@
         }
     }
 }
-
-
 
 $cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99);
 $menuItems: 7;
@@ -339,7 +385,7 @@ $menuItems: 7;
     pointer-events: none;
     display: none;
 
-    @include screen('mobile') {
+    @include screen('tablet') {
         display: block;
     }
 
@@ -373,8 +419,18 @@ $menuItems: 7;
                 a {
                     color: #fff;
                     display: block;
-                    padding: 0.75em 0;
+                    padding: 0.75em 0 0.75em 2em;
                     font-size: 1.25em;
+                    position: relative;
+                    &:before {
+                        position: absolute;
+                        content: '';
+                        width: 0.5em;
+                        height: 2px;
+                        background-color: $auo_lightblue;
+                        left: 0.5em;
+                        top: 1.25em;
+                    }
 
                     &:hover,
                     &:focus {

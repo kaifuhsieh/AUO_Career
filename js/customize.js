@@ -1,4 +1,12 @@
 $(function () {
+    //
+    var burger = $('.mobile_button').find('.btn');
+    sidebar = $('.sidebar');
+
+    burger.off().click(function (e) {
+        sidebar.stop().toggleClass('menu-opened');
+        $(this).blur();
+    });
     // kv
     var $carousel = $('.carousel').slick({
         dots: false,
