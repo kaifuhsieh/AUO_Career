@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'Mabry Pro';
+    // src: url('font/Mabry-Black-Pro.woff') format('woff');
+    // src: url('font/Mabry-Bold-Pro.woff') format('woff');
+    src: url('font/Mabry-Italic-Pro.woff') format('woff');
+    src: url('font/Mabry-Medium-Pro.woff') format('woff');
+    // src: url('font/Mabry-Regular-Pro.woff') format('woff');
+    // src: url('font/Mabry-Black-Pro.woff') format('woff');
+    // src: url('font/Mabry-BoldItalic-Pro.woff') format('woff');
+}
+
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;400&display=swap');
+
+body::-webkit-scrollbar,
+body::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    background-color: rgba($auo_lightblue, 1);
+}
+body {
+    line-height: 1.5em;
+    font-family: 'Mabry Pro', Verdana, 'Noto Sans TC', 'Noto Sans SC', 'Noto Sans JP', 'Microsoft JhengHei',
+        'sans-serif';
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+::selection {
+    background: $auo_yellow;
+    color: $auo_blue;
+}
+::-moz-selection {
+    background: $auo_yellow;
+    color: $auo_blue;
+}
+img::selection {
+    background: transparent;
+}
+img::-moz-selection {
+    background: transparent;
+}
+* {
+    box-sizing: border-box;
+}
+
+img {
+    &.img_circle {
+        //圓形
+        border-radius: 50%;
+    }
+
+    &:not([src]) {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    &.lazy {
+        visibility: hidden;
+    }
+
+    &.loaded {
+        visibility: visible;
+        animation: lazy_animation 0.3s ease-out;
+    }
+}
+
+@keyframes lazy_animation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.wrapper {
+    padding-top: 100px;
+    overflow-x: hidden !important;
+    overflow-y: auto;
+
+    @include screen('tablet') {
+        padding-top: 60px;
+    }
+
+    @include screen('mobile') {
+        padding-top: 60px;
+    }
+}
+
+.container {
+    max-width: $container-max;
+    margin: 0 auto;
+    padding: 0 2em;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+    // outline: 1px solid red;
+
+    @include screen('mobile') {
+        padding: 0 1em;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $aColor;
+}
+
+// scrollTop
+.scrollToTop {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: url(../images/top.png) no-repeat center center rgba($auo_lightblue, 0.75);
+    text-align: center;
+    color: #fff;
+    line-height: 50px;
+    text-decoration: none;
+    position: fixed;
+    bottom: 1.5em;
+    right: 1.5em;
+    transition: 0.3s ease-out;
+    display: none;
+    z-index: 99999999;
+    text-indent: -999999px;
+
+    @include screen('xs_mobile') {
+        bottom: 1em;
+        right: 1em;
+    }
+
+    &:hover,
+    &:focus {
+        background: url(../images/top.png) no-repeat center center rgba($auo_lightblue, 1);
+    }
+}
