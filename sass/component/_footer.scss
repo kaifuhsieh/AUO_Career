@@ -19,7 +19,7 @@
             flex-wrap: wrap;
         }
 
-        &>* {
+        & > * {
             align-items: flex-start;
         }
 
@@ -74,24 +74,21 @@
                 li {
                     width: 1.5em;
                     height: 1.5em;
-                    margin: 0 .5em;
+                    margin: 0 0.5em;
 
                     a {
                         display: block;
-                        transition: .3s ease-out;
-                        opacity: .75;
+                        transition: 0.3s ease-out;
+                        opacity: 0.85;
 
                         &:hover,
                         &:focus {
                             opacity: 1;
                         }
 
-                        ;
-
                         img {
                             width: 100%;
                         }
-
                     }
                 }
             }
@@ -223,19 +220,17 @@
             }
 
             a {
-                color: #FFF;
+                color: #fff;
 
                 &:hover,
                 &:focus {
                     color: $auo_lightblue;
                 }
-
-                ;
             }
 
             p {
                 font-size: 0.913rem;
-                color: #FFF;
+                color: #fff;
             }
         }
     }

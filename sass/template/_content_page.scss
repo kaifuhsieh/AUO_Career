@@ -67,11 +67,10 @@
             }
 
             @include screen('tablet') {
-                flex-basis: 250px;
+                display: none;
             }
 
             @include screen('mobile') {
-                display: none;
             }
         }
 
@@ -84,7 +83,7 @@
             text-align: left;
             max-width: 1200px;
             margin: 0 auto 1em;
-            @include screen('mobile') {
+            @include screen('tablet') {
                 padding: 0 0em 1em;
             }
 
@@ -739,6 +738,7 @@
             padding: 0em 0;
             font-size: 1.25em;
             line-height: 2.5em;
+            max-width: 80%;
         }
     }
 

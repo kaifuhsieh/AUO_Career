@@ -33,11 +33,11 @@ body {
 }
 
 ::selection {
-    background: $auo_yellow;
+    background: rgba($auo_yellow, 0.75);
     color: $auo_blue;
 }
 ::-moz-selection {
-    background: $auo_yellow;
+    background: rgba($auo_yellow, 0.75);
     color: $auo_blue;
 }
 img::selection {

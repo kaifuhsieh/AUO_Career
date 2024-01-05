@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="css/animate.css" />
     <link rel="stylesheet" href="vendor/slick/slick.css">
     <link rel="stylesheet" href="vendor/slick/slick-theme.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/aos/aos.css">
     <link rel="stylesheet" href="vendor/multi_select/jquery.multiselect.css">
     <!-- favicon -->
     <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
@@ -232,7 +232,7 @@
                 <div class="social_link">
                     <ul>
                         <li>
-                            <a href="https://www.auo.com/zh-TW" target="_blank"><img src="images/icon_earth.svg"
+                            <a href="https://www.auo.com/zh-TW" target="_blank"><img src="images/icon_auo_website.svg"
                                     alt=""></a>
                         </li>
                         <li>
@@ -261,13 +261,22 @@
 <script src="vendor/lazyload/lazyload.js"></script>
 <script type="text/javascript" src="vendor/slick/slick.min.js"></script>
 <script src="js/customize.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
+<script src="vendor/gsap/gsap.js"
     integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!-- aos cdn -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="vendor/aos/aos.js"></script>
 <script>
     AOS.init();
 </script>
 <!-- select -->
 <script src="vendor/multi_select/jquery.multiselect.js"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9YJXGHYTSR"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-9YJXGHYTSR');
+</script>
