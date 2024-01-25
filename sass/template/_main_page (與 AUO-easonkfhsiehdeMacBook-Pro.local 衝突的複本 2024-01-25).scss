@@ -1265,10 +1265,6 @@ p {
 .culture {
     background-color: $auo_blue;
 
-    @include screen('tablet') {
-        min-height: 700px;
-    }
-
     .container {
         h2.title {
             color: #fff;
@@ -1419,102 +1415,6 @@ p {
     }
 
     .development_slider {
-        &.job_description {
-            .item {
-                padding: 0 5em;
-
-                @include screen('tablet') {
-                    padding: 0;
-                }
-
-                a {
-                    display: flex;
-                    flex-flow: row wrap;
-
-
-
-                    .img-container {
-                        flex-grow: 0;
-                        flex-shrink: 1;
-                        flex-basis: 30%;
-                        position: relative;
-                        aspect-ratio: 4/3;
-                        margin: 0 auto 1em 0;
-                        align-self: flex-start;
-
-                        @include screen('tablet') {
-                            flex-basis: 360px;
-                            margin: 0 auto 1em;
-
-                        }
-                    }
-
-                    .info {
-                        flex-grow: 0;
-                        flex-shrink: 1;
-                        flex-basis: 70%;
-                        text-align: left;
-                        padding: 0 2em;
-
-                        @include screen('tablet') {
-                            flex-basis: 100%;
-                            margin: 0 auto 1em;
-                            padding: 0;
-                        }
-
-                        h3 {
-                            text-align: left;
-                            color: $auo_yellow;
-                            @include text-line(2, 1.5em);
-
-                            @include screen('tablet') {
-                                text-align: center;
-                                font-size: 1.25em;
-                                @include text-line(3, 1.5em);
-                            }
-                        }
-
-                        h4,
-                        h5 {
-                            color: #FFF;
-                            font-size: 1em;
-                            margin: 0 0 .5em 0;
-                            line-height: 1.5em;
-                            font-weight: normal;
-
-                            @include screen('tablet') {
-                                font-size: 1em;
-                                text-align: center;
-                            }
-                        }
-
-                        h4 {
-                            font-size: 1.75em;
-                            font-weight: bold;
-                            margin: 0 0 1em 0;
-
-                            @include screen('tablet') {
-                                font-size: 1em;
-                                display: none;
-                            }
-                        }
-
-                        p {
-                            text-align: left;
-                            margin: 0 0 .5em 0;
-                            @include text-line(10, 1.5em);
-                            min-height: auto;
-                            height: auto;
-
-                            @include screen('tablet') {
-                                display: none;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
         .item {
             padding: 0 2em;
 
