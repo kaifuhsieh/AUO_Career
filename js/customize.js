@@ -133,7 +133,7 @@ $(function () {
     });
     // 人才發展slider
     $('.talent').slick({
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 300,
         slidesToShow: 3,
@@ -188,41 +188,42 @@ $(function () {
         ],
     });
 
-    $('.know_auo').slick({
-        dots: true,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        adaptiveHeight: false,
-        lazyLoad: 'ondemand',
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: true,
-                },
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                },
-            },
-        ],
-    });
+    // $('.know_auo').slick({
+    //     dots: true,
+    //     infinite: true,
+    //     speed: 300,
+    //     slidesToShow: 3,
+    //     slidesToScroll: 1,
+    //     adaptiveHeight: false,
+    //     lazyLoad: 'ondemand',
+    //     responsive: [
+    //         {
+    //             breakpoint: 1024,
+    //             settings: {
+    //                 slidesToShow: 2,
+    //                 slidesToScroll: 1,
+    //                 infinite: true,
+    //                 dots: true,
+    //             },
+    //         },
+    //         {
+    //             breakpoint: 600,
+    //             settings: {
+    //                 slidesToShow: 1,
+    //                 slidesToScroll: 1,
+    //             },
+    //         },
+    //     ],
+    // });
     $('.auo_environment').slick({
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 300,
         slidesToShow: 3,
         slidesToScroll: 1,
         adaptiveHeight: false,
         lazyLoad: 'ondemand',
+        dot: false,
         responsive: [
             {
                 breakpoint: 1024,
@@ -230,7 +231,6 @@ $(function () {
                     slidesToShow: 2,
                     slidesToScroll: 1,
                     infinite: true,
-                    dots: true,
                 },
             },
             {
@@ -244,8 +244,8 @@ $(function () {
     });
 
     $('.auo_culture').slick({
-        dots: true,
-        infinite: true,
+        dots: false,
+        infinite: false,
         speed: 300,
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -258,12 +258,13 @@ $(function () {
                     slidesToShow: 2,
                     slidesToScroll: 1,
                     infinite: true,
-                    dots: true,
+                    dots: false,
                 },
             },
             {
                 breakpoint: 600,
                 settings: {
+                    dots: false,
                     slidesToShow: 1,
                     slidesToScroll: 1,
                 },
@@ -272,10 +273,10 @@ $(function () {
     });
 
     $('.auo_value').slick({
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 300,
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1,
         adaptiveHeight: false,
         lazyLoad: 'ondemand',
@@ -286,7 +287,8 @@ $(function () {
                     slidesToShow: 2,
                     slidesToScroll: 1,
                     infinite: true,
-                    dots: true,
+                    dots: false,
+                    arrows: true,
                 },
             },
             {
@@ -294,6 +296,8 @@ $(function () {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
+                    dots: false,
+                    arrows: true,
                 },
             },
         ],
@@ -320,10 +324,9 @@ $(function () {
                 activeTabHeight = activeTab.outerHeight();
                 tabWrapper
                     .stop()
-                    .delay(50)
+                    .delay(0)
                     .animate(500, function () {
-                        activeTab.delay(50).fadeIn(250);
-
+                        activeTab.delay(0).show();
                         // Call the specified refresh functions
                         refreshFunctions();
                     });
@@ -335,13 +338,14 @@ $(function () {
     initializeTabs('.tab_items1', '.tab__content1', function () {
         $('.talent').slick('refresh');
         $('.job_description').slick('refresh');
-        $('.know_auo').slick('refresh');
+        // $('.know_auo').slick('refresh');
     });
 
     initializeTabs('.tab_items2', '.tab__content2', function () {
         $('.auo_environment').slick('refresh');
-        $('.auo_culture').slick('refresh');
-        $('.auo_value').slick('refresh');
+        $('.auo_culture').slick('refresh').resize();
+        $('.auo_value').slick('refresh').resize();
+        $(window).resize();
     });
     // fixed q_btn
     $('.q_btn_01')
@@ -400,6 +404,14 @@ $(function () {
                 .animate({ scrollTop: $('.social_media').offset().top - 50 }, 800, 'easeOutExpo');
             e.preventDefault();
         });
+    $('.q_btn_08')
+        .off()
+        .click(function (e) {
+            $('html, body')
+                .stop(true, true)
+                .animate({ scrollTop: $('.auo_employee').offset().top - 50 }, 800, 'easeOutExpo');
+            e.preventDefault();
+        });
     $('.q_btn_search')
         .off()
         .click(function (e) {
@@ -412,7 +424,7 @@ $(function () {
     // 職缺搜尋
     $('select[multiple].active.conditionSelect').multiselect({
         columns: 2,
-        placeholder: '職務類別',
+        placeholder: '職缺類別',
         search: false,
         searchOptions: {
             default: '搜尋',
@@ -422,7 +434,7 @@ $(function () {
 
     $('select[multiple].active.regionSelect').multiselect({
         columns: 2,
-        placeholder: '地區',
+        placeholder: '工作地點',
         search: false,
         searchOptions: {
             default: '搜尋',

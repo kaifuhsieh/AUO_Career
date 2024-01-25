@@ -20,6 +20,7 @@
         .container {
             .form {
                 transform: translateY(-80px) !important;
+
                 @include screen('mobile') {
                     transform: translateY(-50px) !important;
                 }
@@ -70,8 +71,7 @@
                 display: none;
             }
 
-            @include screen('mobile') {
-            }
+            @include screen('mobile') {}
         }
 
         .right_block {
@@ -83,6 +83,7 @@
             text-align: left;
             max-width: 1200px;
             margin: 0 auto 1em;
+
             @include screen('tablet') {
                 padding: 0 0em 1em;
             }
@@ -273,7 +274,7 @@
                                 a {
                                     background-color: $auo_yellow;
                                     color: $auo_blue;
-                                    border-radius: 0.5em;
+                                    // border-radius: 0.5em;
                                     padding: 0.5em 1em;
                                     font-size: 0.875em;
                                 }
@@ -447,6 +448,7 @@
 
                     &:hover,
                     &:focus {
+
                         &:before,
                         &:after {
                             border: 2px solid #fff;
@@ -593,7 +595,7 @@
         border-top: 1px solid #ccc;
         padding: 1em;
 
-        & > a {
+        &>a {
             h3 {
                 font-size: 1rem;
                 border: none;
@@ -1036,9 +1038,11 @@
         }
     }
 }
+
 .faq {
     max-width: 1100px;
     margin: 0 auto 1em;
+
     h3 {
         font-size: 1.5em;
         padding: 0.15em 1.35em;
@@ -1049,6 +1053,7 @@
         color: $auo_blue;
     }
 }
+
 .faq_block {
     max-width: 1100px;
     margin: 0 auto;
@@ -1061,32 +1066,40 @@
     text-align: left;
     transition: 0.3s ease-out;
     background-color: #fff;
+
     @include screen('mobile') {
         padding: 1.5em 1.5em 3em 1.5em;
     }
 
     ul {
+        padding: 1em;
+        margin: 0;
+
         li {
             display: block;
             border-bottom: 1px dashed #ccc;
             padding-bottom: 0.5em;
             margin-bottom: 1em;
+
+
             h3 {
-                margin: 0 0 0.5em;
                 padding: 0;
                 background-color: transparent;
                 display: block;
+
                 a {
                     font-size: 1.25rem;
                     position: relative;
                     font-weight: bold;
                     display: block;
+
                     &.open {
                         &:before {
                             top: 0.6em;
                             transform: rotate(-45deg);
                         }
                     }
+
                     &:before {
                         position: absolute;
                         content: '';
@@ -1099,23 +1112,29 @@
                         border-left: none;
                         transform: rotate(45deg);
                     }
+
                     &:hover,
                     &:focus {
                         color: $auo_lightblue;
                     }
                 }
             }
+
             .faq_content {
                 font-size: 1.125em;
                 line-height: 1.65em;
                 display: none;
+                padding-left: 1.75em;
+
                 p {
                     margin: 0.5em 0;
                 }
+
                 ul,
                 ol {
                     margin: 0.5em 0;
                     padding: 0;
+
                     li {
                         border: none;
                         margin: 0;
@@ -1123,6 +1142,7 @@
                         display: block;
                     }
                 }
+
                 ol {
                     li {
                         list-style: disc;

@@ -192,6 +192,7 @@ p {
             position: relative;
             z-index: 1;
             line-height: 1.25em;
+
             &:last-child {
                 padding-right: 0.2em;
             }
@@ -396,12 +397,14 @@ p {
         background: rgba(255, 255, 255, 0.5);
         backdrop-filter: blur(30px);
         -webkit-backdrop-filter: blur(30px);
+
         @include screen('mobile') {
             -webkit-background: rgba(255, 255, 255, 0.75);
             background: rgba(255, 255, 255, 0.75);
             backdrop-filter: blur(30px);
             -webkit-backdrop-filter: blur(30px);
         }
+
         .form_grp {
             flex-grow: 2;
             flex-shrink: 1;
@@ -412,27 +415,32 @@ p {
             &.condition {
                 flex-grow: 1;
                 flex-basis: 20%;
+
                 @include screen('mobile') {
                     flex-grow: 1;
                     flex-shrink: 1;
                     flex-basis: 100%;
                 }
             }
+
             &.region {
                 flex-grow: 1;
                 flex-basis: 20%;
+
                 @include screen('mobile') {
                     flex-grow: 1;
                     flex-shrink: 1;
                     flex-basis: 100%;
                 }
             }
+
             @include screen('mobile') {
                 flex-grow: 1;
                 flex-shrink: 1;
                 flex-basis: 100%;
             }
         }
+
         .btn_grp {
             flex-grow: 0;
             flex-shrink: 0;
@@ -440,12 +448,14 @@ p {
             padding: 0.5em;
             height: 4em;
             margin: 0;
+
             @include screen('mobile') {
                 flex-grow: 1;
                 flex-shrink: 1;
                 flex-basis: 80%;
                 margin: 0 auto;
             }
+
             .btn {
                 margin: 0;
                 background-color: $color-yellow;
@@ -458,14 +468,17 @@ p {
                 white-space: nowrap;
                 align-items: center;
                 justify-content: center;
+
                 @include screen('mobile') {
                     width: 80%;
                     margin: 0 auto;
                 }
+
                 &:hover {
                     transform: translateY(2px);
                     box-shadow: 0px 0px 35px $color-yellow;
                 }
+
                 img {
                     width: 1em;
                     height: 1em;
@@ -473,35 +486,42 @@ p {
                 }
             }
         }
+
         .keyword {
             flex-grow: 0;
             flex-shrink: 1;
             flex-basis: 100%;
             display: flex;
             padding: 1em 0 1em 0.5em;
+
             span {
                 flex-grow: 0;
                 flex-shrink: 1;
                 flex-basis: 100px;
+
                 @include screen('mobile') {
                     display: none;
                 }
             }
+
             ul {
                 margin: 0;
                 padding: 0;
                 display: flex;
                 justify-content: flex-start;
                 flex-flow: row wrap;
+
                 li {
                     flex-grow: 0;
                     flex-shrink: 1;
                     flex-basis: auto;
                     list-style: none;
+
                     a {
                         display: block;
                         padding: 0 0.5em;
                         white-space: nowrap;
+
                         &:hover,
                         &:focus {
                             color: $auo_purple;
@@ -802,7 +822,7 @@ p {
                 position: absolute;
                 left: 0;
                 width: 100%;
-                padding: 2em 1em 1em;
+                padding: 1.5em 1em 1em;
                 outline: 1px solid transparent;
                 perspective: inherit;
                 z-index: 2;
@@ -826,7 +846,7 @@ p {
                 }
 
                 p {
-                    font-size: 1.125em;
+                    font-size: 1em;
                     line-height: 1.25em;
                     min-height: 3.75em;
                     color: $auo_blue;
@@ -969,9 +989,11 @@ p {
 .process {
     background-color: #fff;
     position: relative;
+
     @media screen and (max-width: 1200px) {
         padding-bottom: 200px !important;
     }
+
     @include screen('mobile') {
         padding-bottom: 400px !important;
     }
@@ -1010,6 +1032,7 @@ p {
         justify-content: flex-end;
         min-height: 350px;
         position: relative;
+
         @media screen and (max-width: 1400px) {
             padding-left: 20%;
         }
@@ -1026,12 +1049,10 @@ p {
             width: 120%;
             height: 10px;
             background: rgb(230, 230, 230);
-            background: linear-gradient(
-                90deg,
-                rgba(230, 230, 230, 1) 0%,
-                rgba(230, 230, 230, 1) 40%,
-                rgba(255, 255, 255, 0) 80%
-            );
+            background: linear-gradient(90deg,
+                    rgba(230, 230, 230, 1) 0%,
+                    rgba(230, 230, 230, 1) 40%,
+                    rgba(255, 255, 255, 0) 80%);
             top: 70px;
             left: 20%;
             border-radius: 1em;
@@ -1041,9 +1062,10 @@ p {
             }
         }
 
-        & + .precess_wrapper {
+        &+.precess_wrapper {
             justify-content: flex-start;
             padding-left: 0;
+
             @media screen and (max-width: 1400px) {
                 padding-right: 20% !important;
             }
@@ -1057,18 +1079,14 @@ p {
             &:before {
                 left: -10%;
                 background: rgb(230, 230, 230);
-                background: linear-gradient(
-                    90deg,
-                    rgba(230, 230, 230, 1) 0%,
-                    rgba(230, 230, 230, 1) 60%,
-                    rgba(255, 255, 255, 0) 100%
-                );
-                background: linear-gradient(
-                    90deg,
-                    rgba(230, 230, 230, 1) 0%,
-                    rgba(230, 230, 230, 1) 40%,
-                    rgba(255, 255, 255, 0) 80%
-                );
+                background: linear-gradient(90deg,
+                        rgba(230, 230, 230, 1) 0%,
+                        rgba(230, 230, 230, 1) 60%,
+                        rgba(255, 255, 255, 0) 100%);
+                background: linear-gradient(90deg,
+                        rgba(230, 230, 230, 1) 0%,
+                        rgba(230, 230, 230, 1) 40%,
+                        rgba(255, 255, 255, 0) 80%);
 
                 @include screen('mobile') {
                     display: none;
@@ -1091,13 +1109,13 @@ p {
             }
 
             @include screen('tablet') {
-                max-width: 200px;
+                max-width: 180px;
                 flex-basis: 50%;
             }
 
             @include screen('mobile') {
                 padding-bottom: 3em;
-                max-width: 150px;
+                max-width: 180px;
             }
 
             @include screen('xs_mobile') {
@@ -1119,8 +1137,7 @@ p {
             }
 
             .img-container {
-                width: 150px;
-                height: 150px;
+                max-width: 150px;
                 border-radius: 50%;
                 background-color: $auo_lightblue;
                 position: relative;
@@ -1128,6 +1145,7 @@ p {
                 overflow: hidden;
                 border-radius: 50%;
                 border: 4px solid $auo_lightblue;
+                aspect-ratio: 1/1;
 
                 img {
                     position: absolute;
@@ -1272,7 +1290,7 @@ p {
                     width: 90%;
                 }
 
-                > li {
+                >li {
                     flex-grow: 0;
                     flex-shrink: 1;
                     flex-basis: auto;
@@ -1353,7 +1371,11 @@ p {
                 border-radius: 5px;
                 min-height: 500px;
 
-                > div {
+                @include screen('mobile') {
+                    min-height: 400px;
+                }
+
+                >div {
                     width: 100%;
                     position: absolute;
                     top: 0;
@@ -1401,6 +1423,8 @@ p {
             }
 
             a {
+                pointer-events: none;
+
                 &:hover,
                 &:focus {
                     .img-container {
@@ -1433,16 +1457,16 @@ p {
             h3 {
                 @include text-line(2, 1.25em);
                 color: #fff;
-                text-align: left;
+                text-align: center;
                 margin: 0 0 0.25em;
-                font-size: 1.25em;
+                font-size: 1.5em;
             }
 
             p {
                 @include text-line(2, 1.5em);
                 color: lighten($auo_lightblue, 20);
-                text-align: left;
-                font-size: 0.938em;
+                text-align: center;
+                font-size: 1em;
                 font-weight: normal;
             }
         }
@@ -1459,7 +1483,7 @@ p {
 
         .tab_wrapper {
             .tab_items {
-                > li {
+                >li {
                     color: $auo_blue;
 
                     &:after {
@@ -1489,6 +1513,85 @@ p {
     }
 
     .culture_slider {
+        &.auo_environment {
+            .item {
+                a {
+                    p {
+                        font-size: 1.125em;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        &.auo_culture {
+            .item {
+                padding: 1em 3em;
+
+                a {
+                    .img-container {
+                        img {
+                            width: 50%;
+                            height: 50%;
+                            left: 50%;
+                            top: 50%;
+                            margin-left: -25%;
+                            margin-top: -25%;
+                            object-fit: contain;
+                        }
+                    }
+
+                    h3 {
+                        text-align: center;
+                        font-size: 1.75em;
+                        margin-bottom: .25em;
+                        @include text-line(1, 1.5em)
+                    }
+
+                    p {
+                        font-size: 1.125em;
+                        text-align: center;
+                        @include text-line(5, 1.5em);
+                    }
+                }
+            }
+        }
+
+        &.auo_value {
+            .item {
+                background: url(../images/icon_square.jpg) no-repeat 85% 10% #FFF;
+                margin: 1em 2em 3em;
+                padding: 2em 1.5em;
+                min-height: 350px;
+                border-radius: .5em;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+                @include screen('mobile') {
+                    padding: 2em 1em;
+                    margin: 1em 1em 3em;
+                }
+
+                h3 {
+                    margin: 1em 0 3em;
+                    font-size: 1.75em;
+                    text-align: left;
+
+                    @include screen('mobile') {
+                        margin: 1em 0 1em;
+                    }
+                }
+
+                p {
+                    font-size: 1.125em;
+                    @include text-line(5, 1.5em);
+                }
+            }
+
+            .slick-dots {
+                bottom: -2.5em;
+            }
+        }
+
         .item {
             padding: 0 2em;
 
@@ -1497,6 +1600,8 @@ p {
             }
 
             a {
+                pointer-events: none;
+
                 &:hover,
                 &:focus {
                     .img-container {
@@ -1529,23 +1634,25 @@ p {
             h3 {
                 @include text-line(2, 1.25em);
                 color: $auo_blue;
-                text-align: left;
+                text-align: center;
                 margin: 0 0 0.25em;
-                font-size: 1.25em;
+                font-size: 1.5em;
             }
 
             p {
-                @include text-line(2, 1.5em);
+                @include text-line(3, 1.5em);
                 color: $auo_blue;
                 text-align: left;
-                font-size: 0.938em;
+                font-size: 1em;
                 font-weight: normal;
             }
         }
     }
 }
+
 .social_media {
     position: relative;
+
     &:before {
         position: absolute;
         content: '';
@@ -1556,8 +1663,250 @@ p {
         background: url(../images/social_bg.png) no-repeat right top;
         background-size: cover;
         min-width: 220px;
+
         @include screen('xs_mobile') {
             opacity: 0.5;
+        }
+    }
+
+    .social_content {
+        display: flex;
+        max-width: 720px;
+        margin: 0 auto 1em;
+
+        @include screen('mobile') {
+            flex-flow: row wrap;
+            width: 340px;
+            margin: 0 auto;
+        }
+
+        .facebook_iframe {
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 50%;
+        }
+
+        .social_link {
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 45%;
+            padding: 0 2.5%;
+
+            ul {
+                list-style: none;
+
+                li {
+                    display: block;
+                    text-align: left;
+                    line-height: 1.5;
+
+                    a {
+                        display: block;
+                        padding: .5em;
+                        display: flex;
+                        align-items: center;
+                        font-size: 1.5em;
+
+                        &:hover,
+                        &:focus {
+                            img {
+                                transform: translateX(-.5em)
+                            }
+                        }
+
+                        ;
+                    }
+
+                    img {
+                        width: 1.5em;
+                        height: 1.5em;
+                        display: inline-block;
+                        margin: 0 .5em 0 0;
+                        transition: .3s ease-out;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.auo_employee {
+    .container {
+        @include screen('mobile') {
+            padding-left: 2em;
+            padding-right: 2em;
+        }
+    }
+
+    h2.title {
+        color: #FFF;
+    }
+
+    background-color: $auo-blue;
+
+    .employee {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+
+        .item {
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 80%;
+            background-color: #FFF;
+            display: flex;
+            margin: 0 0 2em 10%;
+            max-width: 1100px;
+
+            @include screen('tablet') {
+                margin: 0 auto 2em;
+                flex-flow: row wrap;
+                max-width: 400px;
+            }
+
+            &:nth-child(1) {
+                background-color: $auo_lightblue;
+            }
+
+            &:nth-child(2) {
+                background-color: $auo_green;
+            }
+
+            &:nth-child(3) {
+                background-color: $auo_yellow;
+            }
+
+
+
+            &:nth-child(2n) {
+                margin: 0 10% 2em 0;
+
+                @include screen('tablet') {
+                    margin: 0 auto 2em;
+                }
+
+                .img-container {
+                    order: 2;
+
+                    @include screen('tablet') {
+                        order: 1;
+                    }
+                }
+
+                .employee_content {
+                    order: 1;
+
+                    @include screen('tablet') {
+                        order: 2;
+                    }
+                }
+            }
+
+            .img-container {
+                aspect-ratio: 1/1;
+                margin: 0;
+                padding: 0;
+                position: relative;
+                flex-grow: 0;
+                flex-shrink: 0;
+                flex-basis: 350px;
+                min-width: 350px;
+
+                @include screen('tablet') {
+                    flex-grow: 0;
+                    flex-shrink: 1;
+                    flex-basis: 100%;
+                    aspect-ratio: 5/4;
+                }
+
+                img {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    object-fit: cover;
+                }
+
+                .employee_name {
+                    position: absolute;
+                    width: 100%;
+                    bottom: 0;
+                    left: 0;
+                    text-align: left;
+                    padding: 1em 2em;
+
+                    .name {
+                        font-size: 1.5em;
+                        color: #FFF;
+                        margin: 0 0 .5rem;
+                        font-weight: bold;
+                        text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.75);
+
+
+                    }
+
+                    .position {
+                        font-size: 1em;
+                        color: $auo_yellow;
+                        margin: 0 0 .5rem;
+                    }
+                }
+            }
+
+            .employee_content {
+                padding: 2em;
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: auto;
+                text-align: left;
+
+                h3 {
+                    font-size: 2em;
+                    margin: 0 0 1em;
+                    color: $auo-blue;
+
+                    @include screen('mobile') {
+                        font-size: 1.5em;
+                    }
+
+                }
+
+                p {
+                    font-size: 1em;
+                    margin: 0 0 1em;
+                    color: #555;
+                    max-width: 720px;
+                }
+
+                a.more {
+                    display: inline-block;
+                    position: relative;
+
+                    &:hover,
+                    &:focus {
+
+                        &:after {
+                            right: -3em;
+                        }
+                    }
+
+                    ;
+
+                    &:after {
+                        position: absolute;
+                        content: "";
+                        transition: .3s ease-out;
+                        width: 1.5em;
+                        height: 1.5em;
+                        right: -2em;
+                        top: 0;
+                        background: url(../images/auo-btn-blank-blue.svg) no-repeat center center;
+                    }
+                }
+
+            }
         }
     }
 }
