@@ -19,10 +19,11 @@
     border: none;
     outline: none;
     border: none;
-    background: url(icon_arrow_left_inverse.png) center center no-repeat RGBA(255, 255, 255, 0.5);
-    background-size: 30px 30px;
+    background: url(auo-swiper-btn-pre.svg) center center no-repeat;
+    background-size: 100%;
     box-shadow: none;
     border-radius: 50%;
+    opacity: 0.75;
 }
 @media screen and (max-width: 768px) {
     .slick-prev,
@@ -32,22 +33,24 @@
     }
 }
 .slick-next {
-    background: url(icon_arrow_right_inverse.png) center center no-repeat RGBA(255, 255, 255, 0.5);
-    background-size: 30px 30px;
+    background: url(auo-swiper-btn-next.svg) center center no-repeat;
+    background-size: 100%;
 }
 .slick-prev:hover,
 .slick-prev:focus {
     color: transparent;
     border: none;
-    background: url(icon_arrow_left_inverse.png) center center no-repeat RGBA(255, 255, 255, 0.8);
-    background-size: 30px 30px;
+    background: url(auo-swiper-btn-pre-hover.svg) center center no-repeat;
+    background-size: 100%;
+    opacity: 1;
 }
 .slick-next:hover,
 .slick-next:focus {
     color: transparent;
     border: none;
-    background: url(icon_arrow_right_inverse.png) center center no-repeat RGBA(255, 255, 255, 0.8);
-    background-size: 30px 30px;
+    background: url(auo-swiper-btn-next-hover.svg) center center no-repeat;
+    background-size: 100%;
+    opacity: 1;
 }
 .slick-prev:hover:before,
 .slick-prev:focus:before,

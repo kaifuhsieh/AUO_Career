@@ -1,5 +1,6 @@
 $(function () {
     //
+    //
     var burger = $('.mobile_button').find('.btn');
     sidebar = $('.sidebar');
 
@@ -400,7 +401,7 @@ $(function () {
         .click(function (e) {
             $('html, body')
                 .stop(true, true)
-                .animate({ scrollTop: $('.social_media').offset().top - 50 }, 800, 'easeOutExpo');
+                .animate({ scrollTop: $('.auo_employee').offset().top - 50 }, 800, 'easeOutExpo');
             e.preventDefault();
         });
     $('.q_btn_08')
@@ -408,7 +409,7 @@ $(function () {
         .click(function (e) {
             $('html, body')
                 .stop(true, true)
-                .animate({ scrollTop: $('.auo_employee').offset().top - 50 }, 800, 'easeOutExpo');
+                .animate({ scrollTop: $('.social_media').offset().top - 50 }, 800, 'easeOutExpo');
             e.preventDefault();
         });
     $('.q_btn_search')

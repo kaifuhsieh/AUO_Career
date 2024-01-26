@@ -72,6 +72,7 @@ select::-ms-expand {
                 padding: 0 1em;
 
                 &.form_inline {
+
                     input[type='text'],
                     select {
                         width: auto;
@@ -104,7 +105,7 @@ select::-ms-expand {
             select:first-child {
                 width: 100px !important;
 
-                & ~ input {
+                &~input {
                     width: calc(100% - 200px);
 
                     @include screen('xs_mobile') {
@@ -133,7 +134,7 @@ select::-ms-expand {
                     text-align: center;
                 }
 
-                ~ select {
+                ~select {
                     margin-left: 0.2em;
 
                     @include screen('xs_mobile') {
@@ -179,7 +180,7 @@ select::-ms-expand {
                 display: block;
             }
 
-            & + .datepick {
+            &+.datepick {
                 margin-left: 0.3em;
                 margin-right: 0;
                 padding-right: 0;
@@ -225,7 +226,7 @@ select::-ms-expand {
                 }
             }
 
-            > input[type='text'] {
+            >input[type='text'] {
                 width: 10em;
                 padding-right: 2em;
 
@@ -239,6 +240,7 @@ select::-ms-expand {
 
 //---------------------------------------------form setting--------//
 form {
+
     .form_grp,
     .check_grp,
     .radio_grp,
@@ -266,6 +268,7 @@ form {
 
     .form_grp,
     .upload_grp {
+
         // 文字表單個別行內設定
         &.form_inline {
             label {
@@ -288,8 +291,8 @@ form {
             vertical-align: middle;
             margin-right: 0.5em;
 
-            & ~ input,
-            & ~ textarea {
+            &~input,
+            &~textarea {
                 display: inline-block;
                 width: auto;
                 vertical-align: middle;
@@ -317,6 +320,7 @@ form {
         // .radio_grp {}
 
         .btn_grp {
+
             .btn,
             input[type='submit'],
             input[type='reset'],
@@ -346,6 +350,7 @@ legend {
     }
 
     &.inline {
+
         input,
         select,
         textarea {
@@ -469,9 +474,7 @@ input[type='radio'] {
 }
 
 input[type='checkbox']:checked,
-input[type='checkbox']:focus,
-input[type='radio']:checked,
-input[type='radio']:focus {
+input[type='radio']:checked {
     border-color: $form-focus;
     background-color: $form-focus;
     outline: none;
@@ -497,7 +500,7 @@ input[disable] {
     color: darken($color-gray, 10);
     border-color: darken($color-gray, 10);
 
-    & ~ label {
+    &~label {
         color: darken($color-gray, 10);
     }
 
@@ -553,17 +556,17 @@ img.captcha {
     max-height: 2.5em;
     margin-bottom: 0.3em;
 
-    & + input {
+    &+input {
         display: inline-block;
         width: auto;
         vertical-align: middle;
     }
 
-    ~ .btn {
+    ~.btn {
         margin-top: -1px;
     }
 
-    ~ img {
+    ~img {
         display: inline-block;
         vertical-align: middle;
         max-height: 2.4em;

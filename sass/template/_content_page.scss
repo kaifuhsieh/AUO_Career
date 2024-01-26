@@ -1,18 +1,22 @@
 .inner_img {
     min-height: 200px;
     padding-top: 100px;
-    background-color: $auo_lightblue;
+    background-color: $auo_blue;
     position: relative;
     width: 100%;
-    // outline: 1px solid red;
 
+    @include screen('mobile') {
+        padding-top: 60px;
+    }
+
+    // outline: 1px solid red;
     &.mask {
         &:before {
             background-color: #fff;
         }
 
         &:after {
-            background-color: $auo_blue;
+            background-color: $auo_lightblue;
         }
     }
 
@@ -25,6 +29,54 @@
                     transform: translateY(-50px) !important;
                 }
             }
+        }
+    }
+
+    .container {
+        position: relative;
+        z-index: 1;
+
+        &:before {
+            position: absolute;
+            content: "";
+            width: 300px;
+            height: 300px;
+            background: url(../images/auo_pattern_01.png) no-repeat center center;
+            background-size: contain;
+            z-index: 0;
+            left: 50%;
+            margin-left: -60%;
+            top: -105%;
+
+            @include screen('mobile') {
+                top: auto;
+                bottom: 10%
+            }
+        }
+
+        &:after {
+            position: absolute;
+            content: "";
+            width: 300px;
+            height: 300px;
+            background: url(../images/auo-index-pattern-2.png) no-repeat center center;
+            background-size: contain;
+            z-index: 0;
+            left: 50%;
+            margin-left: 40%;
+            top: -150%;
+
+            @include screen('mobile') {
+                right: -20%;
+                top: -70%;
+            }
+        }
+
+        .form {
+            position: relative;
+            z-index: 3;
+            max-width: 1170px;
+            margin-top: 2em;
         }
     }
 
@@ -50,6 +102,8 @@
 // 內頁layout
 .inner_layout {
     padding-top: 2em;
+    position: relative;
+    z-index: 3;
 
     .container {
         display: flex;
@@ -114,6 +168,7 @@
                     left: 0.5em;
                     top: -0.1em;
                     background-color: $auo_purple;
+                    display: none;
                 }
             }
         }
@@ -691,7 +746,7 @@
     background-color: #fff;
 
     @include screen('mobile') {
-        padding: 1.5em 1.5em 3em 1.5em;
+        padding: 1.5em 1.5em 6em 1.5em;
     }
 
     a.more {
@@ -730,7 +785,7 @@
         }
 
         @include screen('mobile') {
-            bottom: 2em;
+            bottom: 1.5em;
             left: 50%;
             top: auto;
             width: 80%;
@@ -1080,6 +1135,7 @@
             border-bottom: 1px dashed #ccc;
             padding-bottom: 0.5em;
             margin-bottom: 1em;
+            padding: 1em;
 
 
             h3 {
@@ -1092,30 +1148,38 @@
                     position: relative;
                     font-weight: bold;
                     display: block;
+                    padding-left: 1em;
 
                     &.open {
-                        &:before {
-                            top: 0.6em;
-                            transform: rotate(-45deg);
+
+                        &:after {
+                            transform: rotate(0deg);
                         }
                     }
 
                     &:before {
                         position: absolute;
                         content: '';
-                        width: 0.5em;
-                        height: 0.5em;
+                        width: .75em;
                         left: -1.25em;
-                        top: 0.6em;
+                        top: 0.8em;
                         border: 2px solid $auo_lightblue;
-                        border-top: none;
-                        border-left: none;
-                        transform: rotate(45deg);
+                    }
+
+                    &:after {
+                        position: absolute;
+                        content: '';
+                        width: .75em;
+                        left: -1.25em;
+                        top: 0.8em;
+                        border: 2px solid $auo_lightblue;
+                        transition: .3s ease-out;
+                        transform: rotate(-90deg);
                     }
 
                     &:hover,
                     &:focus {
-                        color: $auo_lightblue;
+                        color: $auo_purple;
                     }
                 }
             }
@@ -1124,7 +1188,7 @@
                 font-size: 1.125em;
                 line-height: 1.65em;
                 display: none;
-                padding-left: 1.75em;
+                padding-left: 2.75em;
 
                 p {
                     margin: 0.5em 0;
@@ -1150,5 +1214,50 @@
                 }
             }
         }
+    }
+}
+
+.error_404 {
+    background: url(../images/auo-404.jpg) no-repeat center center;
+    min-height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: calc(100vh - 120px);
+    padding: 280px 0;
+    text-align: left;
+
+    .container {
+        text-align: left;
+    }
+
+    h3 {
+        font-size: 3em;
+        line-height: 1.25em;
+        color: $auo_yellow;
+        text-align: left;
+    }
+
+    p {
+        color: #FFF;
+        font-size: 1.5em;
+    }
+
+    a.back {
+        color: $auo-blue;
+        padding: .75em 2.5em;
+        display: block;
+        margin: 0 auto 0 0;
+        background-color: #FFF;
+        border-radius: 3em;
+        display: inline-block;
+        transition: .3s ease-out;
+
+        &:hover,
+        &:focus {
+            background-color: $auo_lightblue;
+        }
+
+        ;
     }
 }
