@@ -1123,7 +1123,7 @@
     background-color: #fff;
 
     @include screen('mobile') {
-        padding: 1.5em 1.5em 3em 1.5em;
+        padding: 1.5em 0em 3em 0em;
     }
 
     ul {
@@ -1236,11 +1236,21 @@
         line-height: 1.25em;
         color: $auo_yellow;
         text-align: left;
+
+        @include screen('mobile') {
+            font-size: 1.5em;
+        }
     }
 
     p {
         color: #FFF;
         font-size: 1.5em;
+
+        @include screen('mobile') {
+            font-size: 1.125em;
+        }
+
+
     }
 
     a.back {
