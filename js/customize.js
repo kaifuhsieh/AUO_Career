@@ -470,4 +470,86 @@ $(document).ready(function () {
             });
         })
         .trigger('scroll'); // 這裡觸發一次 scroll 事件，確保一開始就檢查元素是否在視窗內
+    //
+    $('.goto_expo')
+        .off()
+        .click(function (e) {
+            $('html, body')
+                .stop(true, true)
+                .animate({ scrollTop: $('.event_expo').offset().top - 50 }, 800, 'easeOutExpo');
+            sidebar.stop().removeClass('menu-opened');
+            e.preventDefault();
+        });
+    $('.goto_seminar')
+        .off()
+        .click(function (e) {
+            $('html, body')
+                .stop(true, true)
+                .animate({ scrollTop: $('.event_seminar').offset().top - 50 }, 800, 'easeOutExpo');
+            sidebar.stop().removeClass('menu-opened');
+            e.preventDefault();
+        });
+    $('.goto_pre_offer')
+        .off()
+        .click(function (e) {
+            $('html, body')
+                .stop(true, true)
+                .animate({ scrollTop: $('.event_pre_offer').offset().top - 50 }, 800, 'easeOutExpo');
+            sidebar.stop().removeClass('menu-opened');
+            e.preventDefault();
+        });
+    $('.goto_event_feature')
+        .off()
+        .click(function (e) {
+            $('html, body')
+                .stop(true, true)
+                .animate({ scrollTop: $('.event_feature').offset().top - 50 }, 800, 'easeOutExpo');
+            sidebar.stop().removeClass('menu-opened');
+            e.preventDefault();
+        });
+    $('.goto_event_application')
+        .off()
+        .click(function (e) {
+            $('html, body')
+                .stop(true, true)
+                .animate({ scrollTop: $('.event_application').offset().top - 50 }, 800, 'easeOutExpo');
+            sidebar.stop().removeClass('menu-opened');
+            e.preventDefault();
+        });
+    $('.goto_event_senior')
+        .off()
+        .click(function (e) {
+            $('html, body')
+                .stop(true, true)
+                .animate({ scrollTop: $('.event_senior').offset().top - 50 }, 800, 'easeOutExpo');
+            sidebar.stop().removeClass('menu-opened');
+            e.preventDefault();
+        });
+    $('.goto_event_golf')
+        .off()
+        .click(function (e) {
+            $('html, body')
+                .stop(true, true)
+                .animate({ scrollTop: $('.event_golf').offset().top - 50 }, 800, 'easeOutExpo');
+            sidebar.stop().removeClass('menu-opened');
+            e.preventDefault();
+        });
+    $('.goto_event_golf')
+        .off()
+        .click(function (e) {
+            $('html, body')
+                .stop(true, true)
+                .animate({ scrollTop: $('.event_golf').offset().top - 50 }, 800, 'easeOutExpo');
+            sidebar.stop().removeClass('menu-opened');
+            e.preventDefault();
+        });
+    $('.goto_faq')
+        .off()
+        .click(function (e) {
+            $('html, body')
+                .stop(true, true)
+                .animate({ scrollTop: $('.event_faq').offset().top - 50 }, 800, 'easeOutExpo');
+            sidebar.stop().removeClass('menu-opened');
+            e.preventDefault();
+        });
 });

@@ -18,6 +18,11 @@
         height: 60px;
     }
 
+    a {
+        text-decoration: none;
+        color: $auo_blue;
+    }
+
     .container {
         max-width: 1600px;
         margin: 0 auto;
@@ -56,6 +61,10 @@
             a {
                 display: flex;
                 align-items: center;
+                color: $auo_blue;
+
+
+
             }
         }
 
@@ -63,6 +72,15 @@
             display: flex;
             flex-flow: row nowrap;
             align-items: center;
+
+            &:hover,
+            &:focus {
+                color: $auo_blue !important;
+
+                span {
+                    color: $auo_blue !important;
+                }
+            }
         }
 
         img {
@@ -424,7 +442,7 @@ $cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99);
 $menuItems: 7;
 
 .sidebar {
-    background-color: $primaryColor;
+    background: url(../images/auo-main-menu-m.png) no-repeat bottom right $primaryColor;
     position: fixed;
     top: 0;
     width: 100%;
@@ -472,6 +490,7 @@ $menuItems: 7;
                     padding: 0.75em 0 0.75em 2em;
                     font-size: 1.25em;
                     position: relative;
+                    text-decoration: none;
 
                     &:before {
                         position: absolute;

@@ -10,6 +10,9 @@
         padding: 40px 0;
     }
 
+    a {
+        text-decoration: none;
+    }
 
 
 
@@ -184,6 +187,7 @@
                                 margin-right: 1em;
                                 display: flex;
                                 align-items: center;
+                                white-space: nowrap;
 
                                 img {
                                     display: inline-block;
