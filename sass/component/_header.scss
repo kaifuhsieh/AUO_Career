@@ -36,6 +36,10 @@
         align-content: center;
         align-items: stretch;
 
+        @media screen and (max-width: 1300px) {
+            padding: 0 1em;
+        }
+
         @include screen('mobile') {
             height: 60px;
             padding: 0 1em;
@@ -62,7 +66,6 @@
                 display: flex;
                 align-items: center;
                 color: $auo_blue;
-
 
 
             }
@@ -112,6 +115,8 @@
             align-self: center;
             white-space: nowrap;
             transition: 0.3s ease-out;
+
+
 
             br {
                 display: none;
@@ -180,6 +185,10 @@
                     padding: 0 0.5em;
                     font-size: 1.125rem;
 
+
+
+
+
                     span {
                         font-weight: normal;
                     }
@@ -233,6 +242,7 @@
 
         @include screen('mobile') {
             display: block;
+            right: 2em;
         }
 
         a {
@@ -396,6 +406,15 @@
 
                     span {
                         font-size: 1.125rem;
+
+                        @media screen and (max-width: 1150px) {
+                            font-size: .938rem;
+
+                        }
+
+                        @include screen('tablet') {
+                            font-size: 1.125rem;
+                        }
 
                         @include screen('mobile') {
                             font-size: 0.875em;

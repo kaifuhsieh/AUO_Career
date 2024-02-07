@@ -478,6 +478,7 @@ $(document).ready(function () {
                 .stop(true, true)
                 .animate({ scrollTop: $('.event_expo').offset().top - 50 }, 800, 'easeOutExpo');
             sidebar.stop().removeClass('menu-opened');
+            $(this).blur();
             e.preventDefault();
         });
     $('.goto_seminar')
@@ -487,6 +488,7 @@ $(document).ready(function () {
                 .stop(true, true)
                 .animate({ scrollTop: $('.event_seminar').offset().top - 50 }, 800, 'easeOutExpo');
             sidebar.stop().removeClass('menu-opened');
+            $(this).blur();
             e.preventDefault();
         });
     $('.goto_pre_offer')
@@ -496,6 +498,7 @@ $(document).ready(function () {
                 .stop(true, true)
                 .animate({ scrollTop: $('.event_pre_offer').offset().top - 50 }, 800, 'easeOutExpo');
             sidebar.stop().removeClass('menu-opened');
+            $(this).blur();
             e.preventDefault();
         });
     $('.goto_event_feature')
@@ -505,6 +508,7 @@ $(document).ready(function () {
                 .stop(true, true)
                 .animate({ scrollTop: $('.event_feature').offset().top - 50 }, 800, 'easeOutExpo');
             sidebar.stop().removeClass('menu-opened');
+            $(this).blur();
             e.preventDefault();
         });
     $('.goto_event_application')
@@ -514,6 +518,7 @@ $(document).ready(function () {
                 .stop(true, true)
                 .animate({ scrollTop: $('.event_application').offset().top - 50 }, 800, 'easeOutExpo');
             sidebar.stop().removeClass('menu-opened');
+            $(this).blur();
             e.preventDefault();
         });
     $('.goto_event_senior')
@@ -523,6 +528,7 @@ $(document).ready(function () {
                 .stop(true, true)
                 .animate({ scrollTop: $('.event_senior').offset().top - 50 }, 800, 'easeOutExpo');
             sidebar.stop().removeClass('menu-opened');
+            $(this).blur();
             e.preventDefault();
         });
     $('.goto_event_golf')
@@ -532,6 +538,7 @@ $(document).ready(function () {
                 .stop(true, true)
                 .animate({ scrollTop: $('.event_golf').offset().top - 50 }, 800, 'easeOutExpo');
             sidebar.stop().removeClass('menu-opened');
+            $(this).blur();
             e.preventDefault();
         });
     $('.goto_event_golf')
@@ -541,6 +548,7 @@ $(document).ready(function () {
                 .stop(true, true)
                 .animate({ scrollTop: $('.event_golf').offset().top - 50 }, 800, 'easeOutExpo');
             sidebar.stop().removeClass('menu-opened');
+            $(this).blur();
             e.preventDefault();
         });
     $('.goto_faq')
@@ -550,6 +558,7 @@ $(document).ready(function () {
                 .stop(true, true)
                 .animate({ scrollTop: $('.event_faq').offset().top - 50 }, 800, 'easeOutExpo');
             sidebar.stop().removeClass('menu-opened');
+            $(this).blur();
             e.preventDefault();
         });
 });

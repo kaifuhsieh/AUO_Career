@@ -483,6 +483,7 @@ p {
                         display: block;
                         padding: 0 0.5em;
                         white-space: nowrap;
+                        text-decoration: none;
 
                         &:hover,
                         &:focus {
@@ -536,7 +537,7 @@ p {
             }
 
             @include screen('mobile') {
-                font-size: 1.65em;
+                font-size: 1.5em;
                 text-align: left;
             }
         }
@@ -1193,8 +1194,7 @@ p {
                     // box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 1);
                 }
 
-                &:hover,
-                &:focus {
+                &:hover {
                     span {
                         opacity: 1;
                         right: -2em;

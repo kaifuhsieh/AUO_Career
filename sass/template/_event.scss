@@ -105,6 +105,19 @@ a {
             z-index: 2;
         }
 
+        &.auo_plus {
+            .info {
+                h2 {
+                    font-size: 3.5em;
+                    margin: .25em 0 .5em;
+
+                    @include screen('tablet') {
+                        font-size: 2.5em;
+                    }
+                }
+            }
+        }
+
         .container {
             z-index: 3;
             min-height: 100%;
@@ -209,9 +222,12 @@ a {
                     font-size: 1.125em;
                 }
 
-                br {
-                    display: none;
+                @include screen('mobile') {
+                    br {
+                        display: none;
+                    }
                 }
+
             }
         }
 
@@ -366,12 +382,13 @@ a {
 
                         span {
                             color: $auo_lightblue;
-                            flex-grow: 1;
+                            flex-grow: 0;
                             flex-shrink: 0;
-                            flex-basis: 7em;
+                            flex-basis: auto;
                             position: relative;
                             margin-left: 1em;
-                            max-width: 6em;
+                            margin-right: 1em;
+                            // max-width: 6em;
 
                             @media screen and (max-width:1200px) {
                                 max-width: 100%;
@@ -800,7 +817,7 @@ a {
             }
 
             span {
-                font-size: 1.5em;
+                font-size: 1.25em;
                 color: $auo_purple;
                 font-weight: bold;
                 display: block;
@@ -816,11 +833,12 @@ a {
         .expo_info {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
             padding-bottom: .5em;
             margin-top: 2em;
+            position: relative;
 
-            @include screen('mobile') {
+            @include screen('tablet') {
                 flex-flow: row wrap;
             }
 
@@ -828,19 +846,20 @@ a {
                 color: $auo-blue;
                 font-size: 1.5em;
                 margin: 0;
+                background-color: #64dcf0;
+                border-radius: 2em;
+                line-height: 1.5em;
+                padding: 0.25em 1em;
 
-                @include screen('mobile') {
+                @include screen('tablet') {
                     flex-grow: 0;
                     flex-shrink: 1;
                     flex-basis: 100%;
                     margin-bottom: 1em;
                     background-color: #64dcf0;
                     color: #005087;
-                    border-radius: 2em;
-                    line-height: 1.5em;
                     display: block;
                     text-align: center;
-                    padding: 0.25em 1em;
                     max-width: 400px;
                     font-size: 1.25em;
                     margin: 0 auto 1em;
@@ -849,13 +868,97 @@ a {
 
             span {
                 color: red;
+                margin: 0 0 0 auto;
+                // display: none;
+                position: absolute;
+                right: 0;
 
-                @include screen('mobile') {
+                @include screen('tablet') {
                     flex-grow: 0;
                     flex-shrink: 1;
                     flex-basis: 100%;
+                    position: relative;
+
                 }
             }
+        }
+
+        .expo_school {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            margin: 1em 0 0;
+
+            .item {
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: 32%;
+                margin: 0 0 1em;
+                min-height: 80px;
+                background-color: #f5f5f5;
+                display: flex;
+                padding: 1em 1em 1em 6em;
+                justify-content: flex-start;
+                flex-flow: row wrap;
+                border-left: 10px solid $auo_lightblue;
+                position: relative;
+
+                @media screen and (max-width: 1200px) {
+                    flex-basis: 48%;
+                }
+
+                @include screen('mobile') {
+                    flex-basis: 100%;
+                }
+
+                &:before {
+                    position: absolute;
+                    content: "";
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    background-color: #FFF;
+                    left: 15px;
+                    top: 50%;
+                    margin-top: -30px;
+                }
+
+                &:after {
+                    position: absolute;
+                    content: "";
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    background-color: #FFF;
+                    left: 25px;
+                    top: 50%;
+                    margin-top: -20px;
+                    background: url(../images/icon_school.svg) no-repeat center center;
+                }
+
+                .date {
+                    flex-grow: 0;
+                    flex-shrink: 1;
+                    flex-basis: 100%;
+                    order: 2;
+                    text-align: left;
+                    font-size: 1.125em;
+                    color: #777;
+
+
+                }
+
+                h3 {
+                    flex-grow: 0;
+                    flex-shrink: 1;
+                    flex-basis: 100%;
+                    order: 1;
+                    text-align: left;
+                    margin: 0 0 .5em 0;
+                    color: $auo_blue;
+                }
+            }
+
         }
 
         .expo_table {
@@ -915,7 +1018,7 @@ a {
             .info {
                 flex-grow: 1;
                 flex-shrink: 1;
-                flex-basis: 40%;
+                flex-basis: 50%;
                 display: flex;
                 flex-flow: row wrap;
 
@@ -933,9 +1036,13 @@ a {
                 .item {
                     flex-grow: 0;
                     flex-shrink: 1;
-                    flex-basis: 50%;
+                    flex-basis: 80%;
                     padding: 0 1em;
                     text-align: left;
+
+                    @media screen and (max-width:1200px) {
+                        flex-basis: 100%;
+                    }
 
                     @include screen('mobile') {
                         flex-basis: 100%;
@@ -992,10 +1099,7 @@ a {
             .award {
                 flex-grow: 0;
                 flex-shrink: 1;
-                flex-basis: 600px;
-
-
-
+                flex-basis: 700px;
 
                 @media screen and (max-width:1200px) {
                     flex-grow: 0;
@@ -1025,10 +1129,10 @@ a {
                         top: 0;
                         left: 0;
                         object-fit: contain;
-                        transform: scale(120%);
+                        transform: scale(130%) translateY(-20px) translateX(-50px);
 
                         @media screen and (max-width:1300px) {
-                            transform: scale(110%);
+                            transform: scale(120%) translateY(-20px) translateX(-50px);
                         }
 
                         @media screen and (max-width:1200px) {
@@ -1043,10 +1147,36 @@ a {
 
     }
 
+    .event_expo {
+        h2.title {
+            &~p {
+                span {
+                    display: inline-block;
+                    margin: 0 .25em;
+
+                    @include screen('mobile') {
+                        font-size: 1.5em;
+                    }
+                }
+            }
+        }
+    }
+
     // seminar
     .event_seminar {
         padding: 3em 0 5em;
         background-color: #f1f1f1;
+
+        .expo_school {
+            .item {
+                background-color: #FFF;
+
+                &:before {
+
+                    background-color: #f5f5f5;
+                }
+            }
+        }
     }
 
     .event_pre_offer {
@@ -1120,7 +1250,7 @@ a {
                         display: inline-block;
                         margin: 0 .25em;
                         font-size: 1.25em;
-                        font-style: italic;
+                        font-style: normal;
                     }
                 }
 
@@ -1170,6 +1300,7 @@ a {
                             display: inline-block;
                             margin: 0 .25em;
                             font-size: 1.25em;
+                            font-style: normal;
                         }
                     }
                 }
