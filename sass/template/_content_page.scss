@@ -411,6 +411,13 @@
                     padding-right: 5em;
                     color: #777;
 
+                    &>div {
+                        @include text-line(5, 1.5em);
+                        height: auto;
+                        min-height: 4.5em;
+
+                    }
+
                     @include screen('mobile') {
                         padding-right: 0;
                     }
@@ -418,11 +425,11 @@
 
                 h3 {
                     color: $auo_blue;
-                    font-size: 2em;
+                    font-size: 1rem;
                     line-height: 1.5em;
                     // transform: translateX(-0.5em);
                     margin: 0 6em 0.5em 0;
-                    display: block;
+                    display: inline-block;
 
                     @include screen('mobile') {
                         font-size: 1.5em;
@@ -445,6 +452,8 @@
                     font-size: 1.25em;
                     color: #666;
                     margin: 0.5em 0;
+                    font-size: 1rem;
+                    display: inline-block;
 
                     @include screen('mobile') {
                         font-size: 1em;
@@ -455,6 +464,7 @@
                     @include text-line(5, 1.5em);
                     height: auto;
                     min-height: 4.5em;
+                    font-size: 1rem;
                 }
 
                 p,
@@ -466,12 +476,14 @@
 
                 ul,
                 ol {
-                    padding: 1em;
+                    font-size: 1rem;
+                    display: inline-block;
                 }
 
                 li {
                     padding-left: -2em;
                     margin: 0;
+                    display: inline-block;
                 }
             }
         }

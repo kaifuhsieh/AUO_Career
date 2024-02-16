@@ -1236,7 +1236,7 @@ a {
 
                 p {
                     color: #FFF;
-                    font-size: 1.25em;
+                    font-size: 1.125em;
                     text-align: left;
                     line-height: 1.75em;
                     padding: 0 1em;
@@ -1260,7 +1260,7 @@ a {
 
                     li {
                         color: #FFF;
-                        font-size: 1.25em;
+                        font-size: 1.125em;
                         text-align: left;
                         line-height: 1.75em;
                         display: flex;
@@ -1268,6 +1268,7 @@ a {
                         position: relative;
                         padding-left: 1em;
                         flex-flow: row wrap;
+                        margin-bottom: .5em;
 
                         @include screen('mobile') {
                             font-size: 1.125em;
