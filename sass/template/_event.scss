@@ -83,6 +83,10 @@ a {
             color: $primaryColor;
             display: block;
             margin: 1em auto 2em;
+
+            @include screen('mobile') {
+                font-size: 1.25em;
+            }
         }
     }
 

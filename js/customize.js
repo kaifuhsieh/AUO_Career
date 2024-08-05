@@ -178,7 +178,8 @@ $(function () {
         ],
     });
     $('.aplus_photo_slider').slick({
-        dots: true,
+        dots: false,
+        arrows: true,
         autoplay: true,
         infinite: true,
         speed: 300,
