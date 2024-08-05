@@ -7,7 +7,7 @@
     font-size: 0em;
     line-height: 0em;
     position: absolute;
-    top: 45%;
+    bottom: -20%;
     display: block;
     width: 60px !important;
     height: 60px !important;
@@ -30,6 +30,7 @@
     .slick-next {
         width: 50px !important;
         height: 50px !important;
+        bottom: -15%;
     }
 }
 .slick-next {
@@ -67,11 +68,13 @@
     opacity: 0.75;
 }
 .slick-prev {
-    left: 0px;
+    left: auto;
+    right: 110px;
 }
 @media screen and (max-width: 768px) {
     .slick-prev {
-        left: -15px;
+        left: auto;
+        right: 90px;
     }
 }
 [dir='rtl'] .slick-prev {
@@ -86,11 +89,11 @@
     content: '';
 }
 .slick-next {
-    right: 0px;
+    right: 25px;
 }
 @media screen and (max-width: 768px) {
     .slick-next {
-        right: -15px;
+        right: 15px;
     }
 }
 [dir='rtl'] .slick-next {

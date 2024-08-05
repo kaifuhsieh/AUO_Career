@@ -1,9 +1,26 @@
 $(function () {
-    //
+    var submenuLength = $('.sidebar').find('.submenu').length;
+    if (submenuLength > 0) {
+        $('.submenu').each(function () {
+            $(this).siblings('a').addClass('has_child');
+        });
+    }
+    $('.header')
+        .find('nav>ul>li')
+        .hover(function () {
+            $(this).children('.submenu').stop().slideToggle('easeOutQuint');
+        });
+    $('.sidebar')
+        .find('nav>ul>li')
+        .off()
+        .click(function () {
+            $(this).children('.submenu').stop().slideToggle('easeOutQuint');
+            $(this).children('a').stop().toggleClass('already_open');
+        });
+
     //
     var burger = $('.mobile_button').find('.btn');
     sidebar = $('.sidebar');
-
     burger.off().click(function (e) {
         sidebar.stop().toggleClass('menu-opened');
         $(this).blur();
@@ -146,6 +163,34 @@ $(function () {
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true,
+                },
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
+    });
+    $('.aplus_photo_slider').slick({
+        dots: true,
+        autoplay: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        adaptiveHeight: false,
+        lazyLoad: 'ondemand',
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
                     slidesToScroll: 1,
                     infinite: true,
                     dots: true,
@@ -561,4 +606,52 @@ $(document).ready(function () {
             $(this).blur();
             e.preventDefault();
         });
+
+    /*------------------------------------*/
+    ///////table 加上響應式table wrapper/////
+    //*------------------------------------*/
+    $('table').each(function (index, el) {
+        //判斷沒有table_list
+        if ($(this).parents('.table_list').length == 0 && $(this).parents('.fix_th_table').length == 0) {
+            $(this).scroltable();
+        }
+    });
+    // tablearrow arrow，為了設定箭頭
+    $('.scroltable-nav-left').append('<div class="tablearrow_left" style="display:none;"></div>');
+    $('.scroltable-nav-right').append('<div class="tablearrow_right"  style="display:none;"></div>');
+    // 固定版頭
+    function table_Arrow() {
+        if ($('table').parents('.table_list').length == 0 && $('table').parents('.fix_th_table').length == 0) {
+            if ($('.scroltable-wrapper').length > 0) {
+                var stickyArrowTop = Math.floor($('.scroltable-wrapper').offset().top),
+                    thisScroll = Math.floor($(this).scrollTop());
+                if (thisScroll > stickyArrowTop - 230) {
+                    $('.scroltable-wrapper .tablearrow_left').css('display', 'block');
+                    $('.scroltable-wrapper .tablearrow_left').css(
+                        { top: thisScroll - stickyArrowTop + 220 },
+                        100,
+                        'easeOutQuint'
+                    );
+                    $('.scroltable-wrapper .tablearrow_right').css('display', 'block');
+                    $('.scroltable-wrapper .tablearrow_right').css(
+                        { top: thisScroll - stickyArrowTop + 220 },
+                        100,
+                        'easeOutQuint'
+                    );
+                } else {
+                    $('.scroltable-wrapper .tablearrow_left').css({
+                        top: '10px',
+                        display: 'none',
+                    });
+                    $('.scroltable-wrapper .tablearrow_right').css({
+                        top: '10px',
+                        display: 'none',
+                    });
+                }
+            }
+        }
+    }
+    $(window).scroll(function (event) {
+        table_Arrow();
+    });
 });

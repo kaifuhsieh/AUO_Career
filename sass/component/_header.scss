@@ -170,19 +170,21 @@
             display: none;
         }
 
-        ul {
+        &>ul {
             list-style: none;
             display: flex;
             justify-content: flex-end;
             margin: 0;
             align-self: stretch;
 
-            li {
+            &>li {
                 font-weight: 700;
                 margin-right: 28px;
-
                 align-items: center;
                 display: flex;
+                position: relative;
+
+
 
                 a {
                     display: flex;
@@ -191,10 +193,6 @@
                     position: relative;
                     padding: 0 0.5em;
                     font-size: 1.125rem;
-
-
-
-
 
                     span {
                         font-weight: normal;
@@ -221,6 +219,67 @@
                         background-color: $color-blue;
                         bottom: 0px;
                         transition: 0.3s;
+                    }
+                }
+
+                &>ul {
+                    position: absolute;
+                    width: 230px;
+                    height: 250px;
+                    display: block;
+                    top: 125px;
+                    padding-top: 1em;
+                    background-color: #FFF;
+                    border-radius: .5em;
+                    padding: 1em 0;
+                    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                    display: none;
+                    overflow: hidden;
+
+                    &>li {
+                        display: block;
+
+                        a {
+                            width: 100%;
+                            padding: .5em 1.5em;
+                            margin: 0 auto;
+                            font-weight: normal;
+                            transition: .3s ease-out;
+                            font-size: 1rem;
+                            list-style: none !important;
+
+                            &:hover,
+                            &:focus {
+                                background-color: #EEE;
+                            }
+
+
+                            span {
+                                font-weight: normal;
+                            }
+
+                            &:after {
+                                display: none;
+                            }
+                        }
+
+                        &>ul {
+                            position: relative;
+                            width: 100%;
+                            background-color: transparent;
+                            height: auto;
+                            padding: 0;
+                            transition: .3s ease-out;
+
+                            li {
+                                a {
+                                    list-style: none;
+                                    padding-left: 2.5em;
+                                }
+                            }
+
+                        }
+
                     }
                 }
             }
@@ -445,8 +504,10 @@
 
                 >ul {
                     >li {
-                        ul {
-                            top: 1em;
+
+                        &>ul {
+                            top: 65px;
+                            transition: .3s ease-out;
                         }
 
                         a {
@@ -523,24 +584,63 @@ $menuItems: 7;
                 a {
                     color: #fff;
                     display: block;
-                    padding: 0.75em 0 0.75em 2em;
+                    padding: 0.75em 2em 0.75em .25em;
                     font-size: 1.25em;
                     position: relative;
                     text-decoration: none;
 
-                    &:before {
-                        position: absolute;
-                        content: '';
-                        width: 0.5em;
-                        height: 2px;
-                        background-color: $auo_lightblue;
-                        left: 0.5em;
-                        top: 1.25em;
+                    &.has_child {
+                        &:before {
+                            position: absolute;
+                            content: '';
+                            width: 0.6em;
+                            height: 2px;
+                            background-color: $auo_lightblue;
+                            right: 0.475em;
+                            top: 1.25em;
+                        }
+
+                        &:after {
+                            position: absolute;
+                            content: '';
+                            width: 0.6em;
+                            height: 2px;
+                            background-color: $auo_lightblue;
+                            right: 0.5em;
+                            top: 1.25em;
+                            transform: rotate(90deg);
+                        }
                     }
 
                     &:hover,
                     &:focus {
-                        color: $color-blue;
+                        color: $auo_yellow;
+                    }
+                }
+
+                ul {
+                    padding-left: 1.4em;
+                    display: none;
+
+                    a {
+                        font-size: 1.125rem;
+                        padding: .5em .25em;
+                        font-weight: normal;
+
+                        &:before {
+                            display: none;
+                        }
+
+                        &:after {
+                            display: none;
+                        }
+                    }
+
+                    li {
+                        ul {
+                            padding-left: 1em;
+                            display: block;
+                        }
                     }
                 }
             }
@@ -565,6 +665,14 @@ $menuItems: 7;
                 @for $i from 1 through $menuItems {
                     &:nth-child(#{$i}) {
                         transition-delay: #{0.07 * $i + 0.2}s;
+                    }
+                }
+
+                a {
+                    &.already_open {
+                        &:after {
+                            display: none;
+                        }
                     }
                 }
             }
