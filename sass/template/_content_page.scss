@@ -129,8 +129,7 @@
                 display: none;
             }
 
-            @include screen('mobile') {
-            }
+            @include screen('mobile') {}
         }
 
         .right_block {
@@ -398,6 +397,7 @@
                                     // border-radius: 0.5em;
                                     padding: 0.5em 1em;
                                     font-size: 0.875em;
+                                    border-radius: .25rem;
                                 }
                             }
                         }
@@ -410,7 +410,7 @@
                     padding-right: 5em;
                     color: #777;
 
-                    & > div {
+                    &>div {
                         @include text-line(5, 1.5em);
                         height: auto;
                         min-height: 4.5em;
@@ -437,11 +437,16 @@
 
                     a {
                         display: block;
+                        font-size: 1.5em;
 
                         &:hover,
                         &:focus {
                             text-decoration: underline;
                             color: lighten($auo_blue, 10);
+                        }
+
+                        @include screen('mobile') {
+                            font-size: 1.5rem;
                         }
                     }
                 }
@@ -580,6 +585,7 @@
 
                     &:hover,
                     &:focus {
+
                         &:before,
                         &:after {
                             border: 2px solid #fff;
@@ -726,7 +732,7 @@
         border-top: 1px solid #ccc;
         padding: 1em;
 
-        & > a {
+        &>a {
             h3 {
                 font-size: 1rem;
                 border: none;

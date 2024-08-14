@@ -7,9 +7,15 @@ $(function () {
     }
     $('.header')
         .find('nav>ul>li')
-        .hover(function () {
-            $(this).children('.submenu').stop().slideToggle('easeOutQuint');
-        });
+        .hover(
+            function () {
+                $(this).children('.submenu').stop(true, true).delay(200).slideDown();
+            },
+            function () {
+                $(this).children('.submenu').stop(true, true).slideUp();
+            }
+        );
+
     $('.sidebar')
         .find('nav>ul>li')
         .off()
