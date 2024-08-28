@@ -226,6 +226,17 @@
                         bottom: 0px;
                         transition: 0.3s;
                     }
+
+                    &:before {
+                        position: absolute;
+                        content: "";
+                        bottom: 0px;
+                        height: 5px;
+                        width: 100%;
+                        left: 0;
+                        bottom: -5px;
+                        background-color: transparent;
+                    }
                 }
 
                 &>ul {
@@ -253,6 +264,10 @@
                             transition: .3s ease-out;
                             font-size: 1rem;
                             list-style: none !important;
+
+                            &:before {
+                                display: none;
+                            }
 
                             &:hover,
                             &:focus {

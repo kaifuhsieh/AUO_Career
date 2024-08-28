@@ -60,9 +60,9 @@
                             <li><a href="phase_2_eventsite_auo_scholarship.htm">人才獎學金計畫</a></li>
                         </ul>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="https://auo-career.com/Recruiting/Campus_Recruitment"> <span>Global Talent</span></a>
-                    </li>
+                    </li> -->
                     <li>
                         <a href="phase1_job_list.htm"> <span>職缺總覽</span></a>
                     </li>
@@ -99,10 +99,10 @@
                                 <li><a href="phase_2_eventsite_auo_scholarship.htm">人才獎學金計畫</a></li>
                             </ul>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="https://auo-career.com/Recruiting/Campus_Recruitment"> <span>Global
                                     Talent</span></a>
-                        </li>
+                        </li> -->
                         <li>
                             <a href="phase1_job_list.htm"> <span>職缺總覽</span></a>
                         </li>
@@ -111,11 +111,11 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="search_button">
+                <!-- <div class="search_button">
                     <a href="#" class="q_btn_search">
                         <img src="images/icon_search.svg" alt="">
                     </a>
-                </div>
+                </div> -->
                 <div class="mobile_button">
                     <a href="#" class="btn">
                         <span></span>
@@ -154,8 +154,8 @@
                             <div data-aos="fade-left" data-aos-duration="750" data-aos-delay="400"
                                 data-aos-easing="ease-out-cubic" class="item">
                                 <h3>軟體開發</h3>
-                                <p>你將有機會參與前瞻顯示技術研發與場域應用，如Micro LED 驅動電路、AI
-                                    生成車用儀表板內容…等。透過參與電路設計、軟體開發、產品測試與驗證等工作，累積多元的研發經驗。</p>
+                                <p>友達除了致力硬體研發外，也整合軟韌體及雲端服務平台等，提供完整場域解決方案。你可 參與的實習主題包含資安、使用者體驗設計及 場域解決方案(智慧醫療、智慧座艙…)等。
+                                </p>
                             </div>
                             <div data-aos="fade-left" data-aos-duration="750" data-aos-delay="500"
                                 data-aos-easing="ease-out-cubic" class="item">
@@ -215,7 +215,7 @@
                                         </td>
                                         <td>
                                             <ul>
-                                                <li>7/1 (一) ~ 8/30 (五)</li>
+                                                <li>7月初至8月底 <br>(依當年度時程)</li>
                                                 <li>08:00 - 17:00 (全職)</li>
                                             </ul>
                                         </td>
@@ -235,9 +235,14 @@
                             <!-- 請加上add google calendar API -->
                             <!-- 行事曆標題：【投遞履歷】友達光電 A+ 暑期實習開放申請囉！ 日期 & 時間：2025/03/08(六) 10:00 附註：https://reurl.cc/ky553n -->
                             <!-- 活動尚未開放 -->
-                            <button type="button" class="btn btn-primary">提醒我</button>
+                            <!--  -->
+                            <button type="button" class="btn btn-primary" id="addToCalendar">提醒我<add-to-calendar-button
+                                    name="Title" options="'Apple','Google'" location="World Wide Web"
+                                    startDate="2025-03-08" endDate="2025-03-08" startTime="08:00" endTime="10:00"
+                                    timeZone="America/Los_Angeles"></add-to-calendar-button></button>
                             <!-- 活動已開放 -->
-                            <!-- <button type="button" class="btn btn-primary">立即申請</button> -->
+                            <button type="button" class="btn btn-primary"
+                                onclick="window.open('https://www.104.com.tw/company/12nokxe8?job=A%2B&roleJobCat=0_0&area=0&page=1&pageSize=20&order=8&asc=0&jobsource=index_s_cs&tab=job', '_blank')">立即申請</button>
                             <p>活動尚未開放，敬請期待</p>
                         </div>
                     </div>
@@ -410,3 +415,5 @@
 
     gtag('config', 'G-9YJXGHYTSR');
 </script>
+<!-- add calendar -->
+<script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" async defer></script>
