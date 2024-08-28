@@ -107,7 +107,7 @@ p {
         bottom: 24%;
         left: 50%;
         margin-left: -36%;
-        font-size: 8em;
+        font-size: 6em;
         color: #fff;
         font-weight: normal;
         padding-right: 0.5em;
@@ -115,7 +115,7 @@ p {
         text-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
 
         @include screen('notebook') {
-            font-size: 6em;
+            font-size: 5em;
             bottom: 30%;
             left: 5%;
             margin-left: 0;
@@ -130,6 +130,7 @@ p {
         @include screen('mobile') {
             font-size: 2.5em;
             bottom: 25%;
+            display: none;
         }
 
         // font-family: Arial, Helvetica, sans-serif, sans-serif;
@@ -144,6 +145,7 @@ p {
             &:last-child {
                 padding-right: 0.2em;
             }
+
 
             // text-shadow: 3px 4px 0 rgba(0, 0, 0, 0.1);
             &:before {
@@ -207,6 +209,10 @@ p {
             font-size: 0.938em;
             left: 5%;
             margin-left: 0;
+        }
+
+        @include screen('mobile') {
+            display: none;
         }
     }
 
@@ -1058,12 +1064,10 @@ p {
             width: 120%;
             height: 10px;
             background: rgb(230, 230, 230);
-            background: linear-gradient(
-                90deg,
-                rgba(230, 230, 230, 1) 0%,
-                rgba(230, 230, 230, 1) 40%,
-                rgba(255, 255, 255, 0) 80%
-            );
+            background: linear-gradient(90deg,
+                    rgba(230, 230, 230, 1) 0%,
+                    rgba(230, 230, 230, 1) 40%,
+                    rgba(255, 255, 255, 0) 80%);
             top: 70px;
             left: 20%;
             border-radius: 1em;
@@ -1073,7 +1077,7 @@ p {
             }
         }
 
-        & + .precess_wrapper {
+        &+.precess_wrapper {
             justify-content: flex-start;
             padding-left: 0;
 
@@ -1090,18 +1094,14 @@ p {
             &:before {
                 left: -10%;
                 background: rgb(230, 230, 230);
-                background: linear-gradient(
-                    90deg,
-                    rgba(230, 230, 230, 1) 0%,
-                    rgba(230, 230, 230, 1) 60%,
-                    rgba(255, 255, 255, 0) 100%
-                );
-                background: linear-gradient(
-                    90deg,
-                    rgba(230, 230, 230, 1) 0%,
-                    rgba(230, 230, 230, 1) 40%,
-                    rgba(255, 255, 255, 0) 80%
-                );
+                background: linear-gradient(90deg,
+                        rgba(230, 230, 230, 1) 0%,
+                        rgba(230, 230, 230, 1) 60%,
+                        rgba(255, 255, 255, 0) 100%);
+                background: linear-gradient(90deg,
+                        rgba(230, 230, 230, 1) 0%,
+                        rgba(230, 230, 230, 1) 40%,
+                        rgba(255, 255, 255, 0) 80%);
 
                 @include screen('mobile') {
                     display: none;
@@ -1308,7 +1308,7 @@ p {
                     width: 90%;
                 }
 
-                > li {
+                >li {
                     flex-grow: 0;
                     flex-shrink: 1;
                     flex-basis: auto;
@@ -1393,7 +1393,7 @@ p {
                     min-height: 400px;
                 }
 
-                > div {
+                >div {
                     width: 100%;
                     position: absolute;
                     top: 0;
@@ -1594,7 +1594,7 @@ p {
 
         .tab_wrapper {
             .tab_items {
-                > li {
+                >li {
                     color: $auo_blue;
 
                     &:after {
