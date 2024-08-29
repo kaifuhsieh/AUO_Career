@@ -1303,7 +1303,7 @@ p {
 
                 // border-bottom: 1px solid #FFF;
                 @include screen('tablet') {
-                    width: 90%;
+                    width: 100%;
                 }
 
                 >li {
@@ -1321,12 +1321,14 @@ p {
                     color: white;
                     font-size: 1.25em;
                     margin: 0 0.5em;
+                    position: relative;
+                    // outline: 1px solid red;
 
                     @include screen('tablet') {
                         font-size: 0.938em;
-                        min-width: 11em;
-                        width: 80%;
-                        padding: 0.5em 1em;
+                        min-width: 9em;
+                        // width: 80%;
+                        padding: 0.5em 5px;
                         margin: 0;
                         display: flex;
                         align-items: center;
@@ -1339,28 +1341,24 @@ p {
                         }
                     }
 
-                    &:after {
-                        position: absolute;
-                        content: '';
-                        width: 1px;
-                        background-color: #fff;
-                        right: 0;
-                        top: 0;
-                        height: 100%;
-                    }
+                    // &:after {
+                    //     position: absolute;
+                    //     content: '';
+                    //     width: 1px;
+                    //     background-color: #fff;
+                    //     right: 0;
+                    //     top: 0;
+                    //     height: 100%;
+                    // }
 
                     &:before {
-                        z-index: -1;
                         position: absolute;
-                        content: '';
-                        width: 90%;
-                        height: 100%;
-                        top: 0;
-                        left: 5%;
-                        background-color: rgba(255, 255, 255, 0);
-                        transform: translateY(100%);
-                        transition-duration: 0.25s;
-                        border-radius: 2em;
+                        content: "";
+                        width: 80%;
+                        height: 2px;
+                        background-color: rgba(255, 255, 255, 0.15);
+                        bottom: 0;
+                        left: 10%;
                     }
 
                     &:hover {
@@ -1370,12 +1368,19 @@ p {
                     }
 
                     &.active {
-                        color: $auo_blue;
+                        color: #FFF;
+                        position: relative;
 
                         &:before {
-                            transition-duration: 0.5s;
-                            background-color: rgba(255, 255, 255, 0.75);
-                            transform: translateY(0);
+                            // transition-duration: 0.5s;
+                            // background-color: rgba(255, 255, 255, 0.75);
+                            // transform: translateY(0);
+                            position: absolute;
+                            width: 80%;
+                            height: 2px;
+                            background-color: $auo_lightblue;
+                            bottom: 0;
+                            left: 10%;
                         }
                     }
                 }
@@ -1600,7 +1605,7 @@ p {
                     }
 
                     &:before {
-                        background-color: rgba(255, 255, 255, 0);
+                        background-color: rgba(0, 0, 0, .15) !important;
                     }
 
                     &:hover {
@@ -1613,7 +1618,7 @@ p {
                         color: $auo_blue;
 
                         &:before {
-                            background-color: rgba(255, 255, 255, 0.75);
+                            background-color: $auo_lightblue !important;
                         }
                     }
                 }
