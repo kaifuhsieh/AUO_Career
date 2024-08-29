@@ -231,19 +231,20 @@
                                 </table>
                             </div>
                         </div>
-                        <div class="btn_grp">
-                            <!-- 請加上add google calendar API -->
-                            <!-- 行事曆標題：【投遞履歷】友達光電 A+ 暑期實習開放申請囉！ 日期 & 時間：2025/03/08(六) 10:00 附註：https://reurl.cc/ky553n -->
+                        <!-- 以下需要按照HR開放日期擇一顯示 -->
+                        <div class="btn_grp remind">
                             <!-- 活動尚未開放 -->
-                            <!--  -->
-                            <button type="button" class="btn btn-primary" id="addToCalendar">提醒我<add-to-calendar-button
-                                    name="Title" options="'Apple','Google'" location="World Wide Web"
-                                    startDate="2025-03-08" endDate="2025-03-08" startTime="08:00" endTime="10:00"
-                                    timeZone="America/Los_Angeles"></add-to-calendar-button></button>
+                            <add-to-calendar-button name="【投遞履歷】友達光電 A+ 暑期實習開放申請囉！"
+                                description="附註：https://reurl.cc/ky553n" startDate="2025-03-08" startTime="10:00"
+                                endDate="2025-03-08" endTime="11:00" timeZone="Asia/Taipei" location="World Wide Web"
+                                options="'Apple','Google'" buttonStyle="round" size="10" label="提醒我"
+                                language="zh"></add-to-calendar-button>
+                            <p>活動尚未開放，敬請期待</p>
+                        </div>
+                        <div class="btn_grp">
                             <!-- 活動已開放 -->
                             <button type="button" class="btn btn-primary"
                                 onclick="window.open('https://www.104.com.tw/company/12nokxe8?job=A%2B&roleJobCat=0_0&area=0&page=1&pageSize=20&order=8&asc=0&jobsource=index_s_cs&tab=job', '_blank')">立即申請</button>
-                            <p>活動尚未開放，敬請期待</p>
                         </div>
                     </div>
                 </section>

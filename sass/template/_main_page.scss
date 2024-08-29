@@ -107,7 +107,7 @@ p {
         bottom: 24%;
         left: 50%;
         margin-left: -36%;
-        font-size: 6em;
+        font-size: 8em;
         color: #fff;
         font-weight: normal;
         padding-right: 0.5em;
@@ -130,7 +130,6 @@ p {
         @include screen('mobile') {
             font-size: 2.5em;
             bottom: 25%;
-            display: none;
         }
 
         // font-family: Arial, Helvetica, sans-serif, sans-serif;
@@ -211,9 +210,7 @@ p {
             margin-left: 0;
         }
 
-        @include screen('mobile') {
-            display: none;
-        }
+
     }
 
     .kv_slider {
@@ -834,7 +831,7 @@ p {
                     font-size: 1.75em;
                     color: $auo_blue;
                     display: block;
-                    line-height: 1.5em;
+                    line-height: 1.25em;
                     min-height: 3em;
                     margin: 0 .5em 0.5em;
                     display: flex;
@@ -1047,6 +1044,7 @@ p {
         justify-content: flex-end;
         min-height: 350px;
         position: relative;
+        padding-top: 3em;
 
         @media screen and (max-width: 1400px) {
             padding-left: 20%;
@@ -1068,7 +1066,7 @@ p {
                     rgba(230, 230, 230, 1) 0%,
                     rgba(230, 230, 230, 1) 40%,
                     rgba(255, 255, 255, 0) 80%);
-            top: 70px;
+            top: 120px;
             left: 20%;
             border-radius: 1em;
 

@@ -267,15 +267,19 @@
                 a.more {
                     position: absolute;
                     bottom: 0.75em;
-                    right: 2em;
+                    right: .938em;
                     min-width: 5em;
                     font-size: 0.938em;
                     display: block;
                     color: #555;
+                    background-color: #f1f1f1;
+                    border-radius: .5em;
+                    padding: .5em 2em;
 
                     &:hover,
                     &:focus {
                         color: $auo_blue;
+                        background-color: $auo_lightblue;
                     }
 
                     @include screen('mobile') {

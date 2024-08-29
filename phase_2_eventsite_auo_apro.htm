@@ -236,14 +236,20 @@
                                 </table>
                             </div>
                         </div>
-                        <div class="btn_grp">
-                            <!-- 請加上add google calendar API -->
-                            <!-- 行事曆標題：【投遞履歷】友達光電 A+ 暑期實習開放申請囉！ 日期 & 時間：2025/03/08(六) 10:00 附註：https://reurl.cc/ky553n -->
+                        <!-- 以下需要按照HR開放日期擇一顯示 -->
+                        <div class="btn_grp remind">
                             <!-- 活動尚未開放 -->
-                            <button type="button" class="btn btn-primary">提醒我</button>
-                            <!-- 活動已開放 -->
-                            <!-- <button type="button" class="btn btn-primary">立即申請</button> -->
+                            <add-to-calendar-button name="【投遞履歷】友達光電A Pro學期實習開放申請囉！"
+                                description="附註：https://reurl.cc/5dg1vv" startDate="2024-09-23" startTime="10:00"
+                                endDate="2024-09-23" endTime="11:00" timeZone="Asia/Taipei" location="World Wide Web"
+                                options="'Apple','Google'" buttonStyle="round" size="10" label="提醒我"
+                                language="zh"></add-to-calendar-button>
                             <p>活動尚未開放，敬請期待</p>
+                        </div>
+                        <div class="btn_grp">
+                            <!-- 活動已開放 -->
+                            <button type="button" class="btn btn-primary"
+                                onclick="window.open('https://www.104.com.tw/company/12nokxe8?job=A%2B&roleJobCat=0_0&area=0&page=1&pageSize=20&order=8&asc=0&jobsource=index_s_cs&tab=job', '_blank')">立即申請</button>
                         </div>
                     </div>
                 </section>
@@ -408,3 +414,5 @@
 
     gtag('config', 'G-9YJXGHYTSR');
 </script>
+<!-- add calendar -->
+<script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" async defer></script>
