@@ -842,7 +842,7 @@ a {
                     margin: 8em 0 0;
                 }
 
-                &:nth-child(3n + 1) {
+                &:nth-child(odd) {
                     .img-container {
                         transform: translateX(-40px) translateY(60px);
                         order: 2;
@@ -857,7 +857,7 @@ a {
                     }
                 }
 
-                &:nth-child(3n + 2) {
+                &:nth-child(even) {
                     .img-container {
                         transform: translateX(40px) translateY(60px);
                         order: 1;
@@ -882,24 +882,24 @@ a {
                     }
                 }
 
-                &:nth-child(3n) {
-                    .img-container {
-                        transform: translateX(-40px) translateY(60px);
-                        order: 2;
+                // &:nth-child(3n) {
+                //     .img-container {
+                //         transform: translateX(-40px) translateY(60px);
+                //         order: 2;
 
-                        @include screen('tablet') {
-                            transform: translateX(-30px) translateY(0px);
-                        }
+                //         @include screen('tablet') {
+                //             transform: translateX(-30px) translateY(0px);
+                //         }
 
-                        @include screen('mobile') {
-                            transform: translateX(0px) translateY(0px);
-                        }
-                    }
+                //         @include screen('mobile') {
+                //             transform: translateX(0px) translateY(0px);
+                //         }
+                //     }
 
-                    p {
-                        background-color: $auo_lightblue;
-                    }
-                }
+                //     p {
+                //         background-color: $auo_lightblue;
+                //     }
+                // }
 
                 .img-container {
                     flex-grow: 0;
@@ -2646,6 +2646,11 @@ a {
             }
 
             .item {
+
+                a {
+                    display: block;
+                }
+
                 img {
                     width: 100%;
                 }

@@ -242,7 +242,8 @@
             padding: 1em 0;
 
             .item {
-                padding: 1.5em 2em 3em 2em;
+
+                padding: 1.5em 2em 3em 2.5em;
                 border-radius: 1em;
                 border: 1px solid #ccc;
                 position: relative;
@@ -258,10 +259,46 @@
                     .description {
                         color: #333;
                     }
+
+                    .thumbtack {
+                        img {
+                            top: -32px;
+                        }
+                    }
                 }
 
                 @include screen('mobile') {
                     padding: 1.5em 1em 4em 1em;
+                }
+
+                &.top {
+                    border: 2px solid $auo_blue;
+
+                    &:hover {
+                        border: 2px solid transparent;
+                        box-shadow: 0px 0px 0px 2px $auo_lightblue inset;
+                    }
+                }
+
+                .thumbtack {
+                    position: absolute;
+                    width: 2em;
+                    height: 2em;
+                    left: .75em;
+                    top: 1.25em;
+                    overflow: hidden;
+
+                    img {
+                        position: absolute;
+                        width: 32px;
+                        height: 64px;
+                        top: 0;
+                        left: 0;
+                        outline: 1px solid red;
+
+
+                    }
+
                 }
 
                 a.more {
